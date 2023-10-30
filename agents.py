@@ -15,7 +15,10 @@ class Seller:
         self._pot_type = new_pot_type
 
 class Buyer:
+    """
 
+    Description of how else to use buyers as agents.
+    """
     def __init__(self, intention, purchased_pot, community, name):
       self._intention = intention
       self._purchased_pot = purchased_pot
