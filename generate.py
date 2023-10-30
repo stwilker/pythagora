@@ -7,6 +7,7 @@ from agents import Buyer
 from groups import Community
 from groups import GroupOfCommunities
 
+
 def generate_initial_agents(num_buyers, assemblage):
     """
     Generate initial lists of buyers and sellers.
@@ -24,7 +25,8 @@ def generate_initial_agents(num_buyers, assemblage):
             b_name = "buyer_" + str(i)
             new_buyer = Buyer(random_intention, "no_pot_choice", "no_community_yet", b_name)
             list_of_buyers.append(new_buyer)
-        return list_of_buyers 
+        return list_of_buyers
+
 
 def minimum_community_fill(group_of_communities, min_community_fill):
     """
@@ -37,6 +39,7 @@ def minimum_community_fill(group_of_communities, min_community_fill):
             return False
     return True
 
+
 def get_inadequate_communities(group_of_communities, min_community_fill):
     """
     Helper method for community generation.
@@ -48,6 +51,7 @@ def get_inadequate_communities(group_of_communities, min_community_fill):
             inadequate.append(community)
     return inadequate
 
+
 def make_initial_communities(list_of_buyers, min_number_of_communities, min_community_fill, assemblage):
     """
     Create initial Group of Communities.
@@ -57,40 +61,41 @@ def make_initial_communities(list_of_buyers, min_number_of_communities, min_comm
     """
     if min_community_fill * min_number_of_communities > len(list_of_buyers):
         raise ValueError('Minimum conditions not possible.')
-    #Make a stack and fill with buyers    
+    # Make a stack and fill with buyers
     stack = list_of_buyers
     group = GroupOfCommunities([], assemblage)
-    #Sorting buyers into communities
+    # Sorting buyers into communities
     first_pass = True
     while len(stack) != 0:
-        #Case 1: There are no communities; generate min num communities
+        # Case 1: There are no communities; generate min num communities
         if first_pass:
             for i in range(min_number_of_communities):
-                group.add_community(Community([], "#" + str(group.number_of_communities()+1)))
+                group.add_community(Community([], "#" + str(group.number_of_communities() + 1)))
             first_pass = False
-        #Case 2: Any community has less than min num buyers
+        # Case 2: Any community has less than min num buyers
         elif minimum_community_fill(group, min_community_fill) == False:
             random_community = random.choice(get_inadequate_communities(group, min_community_fill))
             top_buyer = stack.pop()
             group.add_buyer_to_community_by_name(top_buyer, random_community)
-        #Case 3: All communities have minimum number and there are less than min num buyers.
+        # Case 3: All communities have minimum number and there are less than min num buyers.
         elif len(stack) < min_community_fill:
-            #Randomly choose between existing communities
+            # Randomly choose between existing communities
             random_community = random.choice(group.list_of_communities)
             top_buyer = stack.pop()
             group.add_buyer_to_community_by_name(top_buyer, random_community)
-        #Case 4: All communities have minimum number and there are more than min num buyers
+        # Case 4: All communities have minimum number and there are more than min num buyers
         else:
             number_of_communities = group.number_of_communities()
             choice = random.choice(list(range(number_of_communities + 1)))
             top_buyer = stack.pop()
-            if choice == number_of_communities: #make new community
-              new_community = Community([], "#" + str(group.number_of_communities()+1))
-              group.add_community(new_community)
-              group.add_buyer_to_community_by_name(top_buyer, new_community)
-            else: 
-              group.add_buyer_to_community_by_index(top_buyer, choice-1)
+            if choice == number_of_communities:  # make new community
+                new_community = Community([], "#" + str(group.number_of_communities() + 1))
+                group.add_community(new_community)
+                group.add_buyer_to_community_by_name(top_buyer, new_community)
+            else:
+                group.add_buyer_to_community_by_index(top_buyer, choice - 1)
     return group
+
 
 def initialize_market_environment(num_buyers, min_communities, min_community_fill, assemblage):
     """
