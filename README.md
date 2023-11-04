@@ -34,7 +34,7 @@ needed to generate an initial market environment, within which the small-world s
 The `experiments.py` file contains all necessary external and internal support packages for the 
 small-world experiment. To run a small-world simulation, complete the following:
 
-`code sample coming soon`
+`experiments.small_world_simulation(number_of_buyers=50, minimum_number_of_communities=3, minimum_community_fill=3, assemblage=['Pot1', 'Pot2', 'Pot3', 'Pot4'], number_of_epochs=800,upper_threshold=.66, lower_threshold=.33, death_threshold=.05, results+directory='results/smwl_pr.5_lattice_DATE_EXPERIMENT, probability_of_rewire=0.5, community_start_structure="choose lattice or dense", verbose=True)`
 
 # Quick Start: Scale-Free Simulation
 The scale-free simulation contains all the methods you will use to model how consumption practices change among communities of buyers  as they join a scale-free social network (i.e., a network that grows through preferential attachment) and this network determines their purchasing behavior in the market space. To run the scale-free simulation, you will first need to install the [generate] file. This file includes all methods needed to generate an initial market environment, within which the scale-free simulation will take place. Once you have downloaded the [generate] file, install the [experiments] file,  which contains all necessary external and internal support packages for the scale-free experiment. Once in the [experiments] file, select the scale-free experiment. 
