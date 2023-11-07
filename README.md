@@ -32,59 +32,22 @@ In practice, this means that buyers purchasing pots go from being minimally conn
 (short path lengths and low clustering for individual communities). The `generate.py` file includes all methods 
 needed to generate an initial market environment, within which the small-world simulation will take place. 
 The `experiments.py` file contains all necessary external and internal support packages for the 
-small-world experiment. To run a small-world simulation, complete the following:
+small-world experiment. Here is an example of how to run a small word simulation:
 
-`for x in range(num_simulations):
-    experiments.small_world_simulation (number_of_buyers=50,
-                            minimum_number_of_communities=3,
-                            minimum_community_fill=3,
-                            assemblage=['Pot1', 'Pot2', 'Pot3', Pot4'],
-                            number_of_epochs=800,
-                            upper_threshold=.66,
-                            lower_threshold=.33,
-                            death_threshold=0.5,
-                            results_directory='results/smwl_pr.5+lattice_DATE_EXP#,
-                            probability_of_rewire=0.5,
-                            community_start_structure="dense",
-                            verbose=True)`
+`experiments.small_world_simulation (number_of_buyers=50, minimum_number_of_communities=3, minimum_community_fill=3, assemblage=['Pot1', 'Pot2', 'Pot3', Pot4'], number_of_epochs=800, upper_threshold=.66, lower_threshold=.33, death_threshold=0.5, results_directory='results/', probability_of_rewire=0.5, community_start_structure="dense", verbose=True)`
 
-All numerical values in the above quickstart are softcoded. Replace the numbers, the assemblage values, and the name of your experiment run to best fit your needs. The community structure selected in this quickstart is "dense", but you may also select "lattice", which creates a minimally connected small-world network at the outset of the experiment run.
+All numerical values in the above quickstart are softcoded. Replace the numbers, the assemblage values, and the name of your experiment run to best fit your needs. The community structure selected in this quickstart is "dense", but you may also select "lattice", which creates a minimally connected small-world network at the outset of the experiment run. The results of the experiment will be placed in the directory indicated by the `results_directory` parameter.
 
 # Quick Start: Scale-Free Simulation
-The scale-free simulation contains all the methods you will use to model how consumption practices change among communities of buyers  as they join a scale-free social network (i.e., a network that grows through preferential attachment) and this network determines their purchasing behavior in the market space. To run the scale-free simulation, you will first need to install the [generate] file. This file includes all methods needed to generate an initial market environment, within which the scale-free simulation will take place. Once you have downloaded the [generate] file, install the [experiments] file,  which contains all necessary external and internal support packages for the scale-free experiment. Once in the [experiments] file, select the scale-free experiment. To quickly run a scale-free simulation, complete the following: 
+The scale-free simulation contains all the methods you will use to model how consumption practices change among communities of buyers  as they join a scale-free social network (i.e., a network that grows through preferential attachment) and this network determines their purchasing behavior in the market space. To run the scale-free simulation, you will first need to install the [generate] file. This file includes all methods needed to generate an initial market environment, within which the scale-free simulation will take place. Once you have downloaded the [generate] file, install the [experiments] file,  which contains all necessary external and internal support packages for the scale-free experiment. Once in the [experiments] file, select the scale-free experiment. To quickly run a scale-free simulation, use the following: 
 
-`for x in range(num_simulations):
-    experiments.scale_free_simulation(number_of_buyers=50,
-                            minimum_number_of_communities=5,
-                            minimum_community_fill=3,
-                            assemblage=['Pot1', 'Pot2', 'Pot3', Pot4'],
-                            number_of_epochs=800,
-                            upper_threshold=.66,
-                            lower_threshold=.33,
-                            death_threshold=0.5,
-                            results_directory='results/sclfr_cb1_DATE_EXP#,
-                            initial_set_size=15,
-                            set_size=5,
-                            community_bonus=1,
-                            verbose=True)`
+`experiments.scale_free_simulation(number_of_buyers=50, </br> minimum_number_of_communities=5, minimum_community_fill=3, assemblage=['Pot1', 'Pot2', 'Pot3', Pot4'], number_of_epochs=800, upper_threshold=.66, lower_threshold=.33, death_threshold=0.5, results_directory='results/', initial_set_size=15, set_size=5, community_bonus=1, verbose=True)`
 
-All numerical values in the above quickstart are softcoded. Replace the numbers, the assemblage values, and the name of your experiment run to best fit your needs. The community bonus in this experiment is set at 1, but you can change the community bonus to see how agents' choices change when they give more weight to their own community members.  
+All numerical values in the above quickstart are softcoded. Replace the numbers, the assemblage values, and the name of your experiment run to best fit your needs. The community bonus in this experiment is set at 1, but you can change the community bonus to see how agents' choices change when they give more weight to their own community members. The results of the experiment will be placed in the directory indicated by the `results_directory` parameter.
 
 # Quick Start: Controls/Random Simulations
 
 To run _Pythagora_, first install the [generate] file. This file includes all methods needed to generate an initial 
-market environment. Using these methods, you can generate an initial list of agents, including both buyers and sellers, add these agents to the market space, place the agents into communities, and establish an “assemblage” that will be bought and sold in the market. Pythagora does not require that you install any external packages, as all necessary external packages are included in the applicable py files. To quickly run a small-world control simulation, complete the following: 
+market environment. Using these methods, you can generate an initial list of agents, including both buyers and sellers, add these agents to the market space, place the agents into communities, and establish an “assemblage” that will be bought and sold in the market. Pythagora does not require that you install any external packages, as all necessary external packages are included in the applicable py files. To quickly run a small-world control simulation, use the following: 
 
-`for x in range(num_simulations):
-    experiments.small_world_congtrol(number_of_buyers=50,
-                            minimum_number_of_communities=3,
-                            minimum_community_fill=3,
-                            assemblage=['Pot1', 'Pot2', 'Pot3', Pot4'],
-                            number_of_epochs=800,
-                            upper_threshold=.66,
-                            lower_threshold=.33,
-                            death_threshold=0.5,
-                            results_directory='results/smwl_pr.5_control_DATE_EXP#,
-                            rewire_prob=0.5,
-                            link_prob=0.5,
-                            verbose=True)`
+`experiments.small_world_control(number_of_buyers=50, minimum_number_of_communities=3, minimum_community_fill=3, assemblage=['Pot1', 'Pot2', 'Pot3', Pot4'], number_of_epochs=800, upper_threshold=.66, lower_threshold=.33, death_threshold=0.5, results_directory='results/', rewire_prob=0.5, link_prob=0.5, verbose=True)`
