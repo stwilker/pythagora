@@ -5,14 +5,14 @@ Includes all methods needed to generate initial marketplace environment.
 import random
 from agents import Buyer
 from groups import Community
-from groups import GroupOfCommunities
+from groups import CommunitySet
 
 
 def generate_initial_agents(num_buyers, assemblage):
     """
-    Generate initial lists of buyers and sellers.
-    Add initial agents to a Market.
-    Return Market.
+    Generates initial lists of buyers and sellers in the market.
+
+    @param assemblage: list of items for sale in market
     @param num_buyers number of buyers to add to Market
     @return Market with initial agents
     """
@@ -30,9 +30,11 @@ def generate_initial_agents(num_buyers, assemblage):
 
 def minimum_community_fill(group_of_communities, min_community_fill):
     """
-    Helper method for community generation.
-    Return false if any community has less than min num buyers.
-    Return true if all communities have minimum number of buyers.
+    Checks if each community has the specific minimum number of buyers.
+    Note: Helper method for community generation.
+    @param group_of_communities: CommunitySet object
+    @param min_community_fill: minimum number of buyers in each community.
+    @return True if all communities have minimum number of buyers; False otherwise.
     """
     for community in group_of_communities.list_of_communities:
         if len(community.list_of_buyers) < min_community_fill:
@@ -42,8 +44,11 @@ def minimum_community_fill(group_of_communities, min_community_fill):
 
 def get_inadequate_communities(group_of_communities, min_community_fill):
     """
+    Gets a list of communities that do not contain the minimum number of buyers.
     Helper method for community generation.
-    Return list of communities with less than min num buyers.
+    @param group_of_communities: CommunitySet object
+    @param min_community_fill: minimum number of buyers in each community.
+    @return list of communities with less than min num buyers.
     """
     inadequate = []
     for community in group_of_communities.list_of_communities:
@@ -54,16 +59,18 @@ def get_inadequate_communities(group_of_communities, min_community_fill):
 
 def make_initial_communities(list_of_buyers, min_number_of_communities, min_community_fill, assemblage):
     """
-    Create initial Group of Communities.
-    @param market_space the Market object with buyer's purchased pots
-    @param min_number_of_communities minimum number of communities model produces
-    @return GroupOfCommunities
+    Generate initial CommunitySet.
+    @param list_of_buyers: buyers in the market
+    @param min_number_of_communities: minimum number of communities
+    @param min_community_fill: minimum number of buyers per community
+    @param assemblage: list of items for sale
+    @return: CommunitySet
     """
     if min_community_fill * min_number_of_communities > len(list_of_buyers):
         raise ValueError('Minimum conditions not possible.')
     # Make a stack and fill with buyers
     stack = list_of_buyers
-    group = GroupOfCommunities([], assemblage)
+    group = CommunitySet([], assemblage)
     # Sorting buyers into communities
     first_pass = True
     while len(stack) != 0:
@@ -73,7 +80,7 @@ def make_initial_communities(list_of_buyers, min_number_of_communities, min_comm
                 group.add_community(Community([], "#" + str(group.number_of_communities() + 1)))
             first_pass = False
         # Case 2: Any community has less than min num buyers
-        elif minimum_community_fill(group, min_community_fill) == False:
+        elif not minimum_community_fill(group, min_community_fill):
             random_community = random.choice(get_inadequate_communities(group, min_community_fill))
             top_buyer = stack.pop()
             group.add_buyer_to_community_by_name(top_buyer, random_community)
@@ -99,10 +106,12 @@ def make_initial_communities(list_of_buyers, min_number_of_communities, min_comm
 
 def initialize_market_environment(num_buyers, min_communities, min_community_fill, assemblage):
     """
-    Generate an initial market environment. 
-    @param num_buyers number of buyers in market environment
-    @param min_communities minimum number of communities
-    @return GroupOfCommunities object representing initialized market space
+    Generate a generic initial market environment.
+
+    @param num_buyers: number of buyers in market environment
+    @param min_communities: minimum number of communities
+    @param min_community_fill: minimum number of buyers per community
+    @return CommunitySet object representing initialized market space
     """
-    buyers = generate_initial_agents(num_buyers, assemblage)
-    return make_initial_communities(buyers, min_communities, min_community_fill, assemblage)
+    buyers = generate.generate_initial_agents(num_buyers, assemblage)
+    return generate.make_initial_communities(buyers, min_communities, min_community_fill, assemblage)

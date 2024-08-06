@@ -1,11 +1,14 @@
 
 # Pythagora: A Python Package for Modeling the Impact of Social Networks in and Around Market Spaces on Market Outcomes
-Developed by Sarah T. Wilker (Oberlin College / swilker@oberlin.edu) and Annie K. Lamar (Stanford University / kalamar@stanford.edu)
+Developed by Sarah T. Wilker & Annie K. Lamar 
 
 ## Citation
 
-Wilker, S.T. and Lamar, A.K. _Pythagora_. Version 1.0.0. github.
-com/stwilker/pythagora. 
+Please cite the Github repository for this project as follows:
+
+Wilker, S.T. and Lamar, A.K. _Pythagora_. Version 1.0.0. github.com/stwilker/pythagora.
+
+## Author Contributions
 
 
 # Project Description
