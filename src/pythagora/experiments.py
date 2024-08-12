@@ -40,9 +40,9 @@ purchase decisions (and be worth the cost and risk associated with changing one'
 -- Lower Threshold (lower_threshold) --
 The lower threshold is the maximum percentage of buyers that may own a particular item to change a buyer's purchasing
 intention to a random item. For a given hypothetical buyer, if the percentage of their social connections (graph
-neighbors) purchasing any possible item is less than the lower threshold, the buyer changes their intention to purchase
-a random item. In short: How unpopular does a particular item need to be to cause a buyer to purchase a new item at
-random (retaining no loyalty to the item they currently own)?
+neighbors) purchasing any possible item is less than the lower threshold, the buyer changes their intention to
+purchase a random item. In short: How unpopular does a particular item need to be to cause a buyer to purchase a new
+item at random (retaining no loyalty to the item they currently own)?
 
 -- Death Threshold (death_threshold) --
 The death threshold is the percentage at which a pot is removed from the market. If the demand for a pot (i.e. buyers
@@ -59,24 +59,25 @@ are lattice or dense. The lattice is a ring lattice with each node connected to 
 structure is a graph in which each node is connected to every other node.
 
 -- Initial Set Size (Scale Free Only) (initial_set_size)  --
-In a scale free experiment, the initial set size defines the
-number of buyers who first enter the marketplace. These buyers are the first to connect, compare, and purchase items.
+
+In a scale free experiment, the initial set size defines the number of buyers who first enter the marketplace. These
+buyers are the first to connect, compare, and purchase items.
 
 -- Set Size (Scale Free Only) (set_size) --
 In a scale free experiment, the set size is the number of buyers added to the marketplace after the initial group.
 
 -- Community Bonus (Scale Free Only) (community_bonus)  --
-Mathematically, the community bonus defines how much
-
-influence community affiliation has on buyer purchase intention. A community bonus of less than 1 means that a buyer
-is less likely to purchase an item if a majority of his community owns that item. A community bonus greater than 1
-means that a buyer is more likely to purcahse an item if a majority of their community own that item. Theoretically
-speaking, community bonuses model and test the influence of established community affiliation on social connections
-and economic actions. All agents are sorted into community groups during the start up phase of the simulation. A
-position (high value) community bonus causes agents to favor new connections and item comparisons with individuals
-who share their preexisting community affiliation. A neutral community bonus value (1.0) means that no community
-bonus exists, and social connection and item comparison occur based solely on preferential attachment. The community
-bonus enhancement to the scale free network protocol was developed by Sarah T. Wilker, PhD (2023).
+Mathematically, the community bonus defines how much influence community affiliation has on buyer purchase intention.
+A community bonus of less than 1 means that a buyer is less likely to purchase an item if a majority of their
+community owns that item. A community bonus greater than 1 means that a buyer is more likely to purchase an item if a
+majority of their community owns that item. Theoretically speaking, community bonuses model and test the influence of
+established community affiliation on social connections and economic actions. All agents are sorted into community
+groups during the start up phase of the simulation. A positive (high value) community bonus causes agents to favor
+new connections and item comparisons with individuals who share their preexisting community affiliation. A neutral
+community bonus value (1.0) means that no community bonus exists, and social connection and item comparison occur
+based solely on preferential attachment. A negative (low value) community bonus incentivizes agents to connect and
+compare with individuals who do not share their preexisting community affiliation. The community bonus enhancement to
+the scale free network protocol was developed by Sarah T. Wilker, PhD (2023).
 
 """
 

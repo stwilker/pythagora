@@ -111,7 +111,7 @@ def initialize_market_environment(num_buyers, min_communities, min_community_fil
     @param num_buyers: number of buyers in market environment
     @param min_communities: minimum number of communities
     @param min_community_fill: minimum number of buyers per community
-    @return CommunitySet object representing initialized market space
+    @return CommunitySet object representing initialized market
     """
     buyers = generate.generate_initial_agents(num_buyers, assemblage)
     return generate.make_initial_communities(buyers, min_communities, min_community_fill, assemblage)
