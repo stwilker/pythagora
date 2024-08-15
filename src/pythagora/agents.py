@@ -3,13 +3,13 @@ This module contains the constructors and all methods for agents in the marketpl
 There are currently two types of marketplace agents you can implement:
 
 Agent: Seller
--------------
+=============
 Sellers are assigned a pot type (or other item, depending on your use case).
 Seller functionality is currently limited as most network methods do not require
 the assignment of sellers, only buyers.
 
 Agent: Buyer
-------------
+============
 Buyers are the primary agent in network models of marketplaces.
 Buyers keep track of their purchase history, their currently assigned item,
 and their intention on the next iteration of the market.

@@ -1,83 +1,165 @@
-"""
-# TODO
+"""The experiments module is the primary module with which users will interact. From this module, you can run every
+kind of experiment and adjust every parameter.
 
-----------------------------
 Simulation/Experiment Types
-----------------------------
+===========================
 
-This module implements two main network protocols: small world and scale free. For both types, we also implement a
+This module implements two main network protocols: small-world and scale-free. For both types, we also implement a
 control model.
 
-# TODO
---------------------------------
+Small-World Network
+-------------------
+
+The small-world experiment tests how consumption practices among individual communities change as they become more
+interconnected. When the small-world experiment starts, buyers are very well-connected to their individual community
+(high clustering) and very disconnected from those outside of their community (long average path length). As the
+experiment runs, random “rewired” connections link agents in different communities, shortening the distance between
+individual communities and reducing the amount of clustering in the network. Over time, different communities become
+so well-connected (short average path length) that there is no significant clustering within individual communities.
+The network becomes a small-network for a limited time between these two extremes, specifically when the
+network has relatively high clustering within individual communities and relatively short path lengths between agents
+across communities. The Small-world experiment can be run with different start structures (details in experiment
+options below).
+
+Scale-Free Network
+------------------
+
+The scale-free experiment tests how consumption practices change among communities of buyers change as they join a
+scale-free social network. In scale-free networks, agents are added to the social network over time (network growth).
+These additional agents connect to those already in the network through the process of preferential attachment,
+which means that agents that have more social connections already will gain more connections over time than those
+with fewer starting connections. A novel feature of this package is the “community bonus” parameter, which allows you
+to test how preexisting community affiliation impacts purchasing preferences. Buyers entering the simulation are
+assigned an initial community designation, and when the community bonus is set at greater than 1.0, buyers are
+incentivized to connect and compare with those who share their existing community designation. When the community
+bonus is set at less than 1.0, buyers are incentivized to connect and compare with those who do not share their
+community affiliation. When simulations are run without a community bonus, buyers are motivated to connect with the
+most popular individual in their network (preferential attachment) regardless of personal closeness.
+
+Experimental Controls
+---------------------
+
+To create a control (or comparison) to a small-world model, a random network is constructed with all of the buyers in
+the market. Agents are initially connected to four random agents regardless of designated community affiliation,
+rather than being connected within their existing community groups as is the case in the small-world experiment.
+Following this set up, connections are formed and rewired in the same way as those in the small-world experiment.
+
+The scale-free control tests how social networks between buyers change when a network grows randomly over time. The
+fundamental difference between a scale-free network and a random network is the presence of preferential attachment,
+which means that a random growth network when compared to the scale-free network can specifically examine the impact
+of preferential attachment on purchasing preferences. The scale-free control network can be run with or without the
+“community bonus” parameter, which means it can also test the impact of preexisting community designation on social
+connection and consumer behavior.
+
 Changeable Experiment Parameters
---------------------------------
+================================
 
--- Number of Buyers (number_of_buyers) --
-How many buyers do you want in your marketspace?
+Number of Buyers
+----------------
+B{Parameter:} C{number_of_buyers}
 
--- Minimum Number of Communities (minimum_number_of_communities) --
-What is the minimum number of buyer communities in the marketspace?
+How many buyers do you want in your market simulation?
 
--- Minimum Community Fill (minimum_community_fill) --
+Minimum Number of Communities
+-----------------------------
+B{Parameter:} C{minimum_number_of_communities}
+
+What is the minimum number of buyer communities in the market simulation?
+
+Minimum Community Fill
+----------------------
+B{Parameter:} C{minimum_community_fill}
+
 What is the minimum number of buyers that must be in a community for the community to exist?
 
--- Assemblage (assemblage) --
-The list of items for sale in the marketspace. We use the word `assemblage` because this software was developed
+Assemblage
+----------
+B{Parameter:} C{assemblage}
+
+The list of items for sale in the marketplace. We use the word `assemblage` because this software was developed
 for analysis of ancient ceramics markets; the algorithms work the same for any list of items and are not field specific.
 
--- Number of Epochs (number_of_epochs) --
+Number of Epochs
+----------------
+B{Parameter:} C{number_of_epochs}
+
 Number of market or purchasing iterations to run in the simulation. This is how many times the buyers will purchase
 items from the market.
 
--- Upper Threshold (upper_threshold) --
+Upper Threshold
+---------------
+B{Parameter:} C{upper_threshold}
+
 The upper threshold is the percentage of buyers that must own a particular item to change a buyer's purchasing
 intention to the dominant item. For a given hypothetical buyer, if the percentage of their social connections
 (graph neighbors) purchasing the same item is greater than or equal to their upper threshold, they change their
 intention to purchase that item. In short: How popular does a particular item need to be to begin influencing others'
 purchase decisions (and be worth the cost and risk associated with changing one's behavior)?
 
--- Lower Threshold (lower_threshold) --
+Lower Threshold
+---------------
+B{Parameter:} C{lower_threshold}
+
 The lower threshold is the maximum percentage of buyers that may own a particular item to change a buyer's purchasing
 intention to a random item. For a given hypothetical buyer, if the percentage of their social connections (graph
 neighbors) purchasing any possible item is less than the lower threshold, the buyer changes their intention to
 purchase a random item. In short: How unpopular does a particular item need to be to cause a buyer to purchase a new
 item at random (retaining no loyalty to the item they currently own)?
 
--- Death Threshold (death_threshold) --
+Death Threshold
+---------------
+B{Parameter:} C{death_threshold}
+
 The death threshold is the percentage at which a pot is removed from the market. If the demand for a pot (i.e. buyers
 who purchased that pot) drops below the death threshold, then the pot is removed from the market. If a Seller was
 selling this item, they are automatically assigned the most popular item.  In short: How unpopular does an item need
 to be before it is removed from the market altogether?
 
--- Probability of Rewire (Small World Only) (probability_of_rewire) --
+Probability of Rewire (Small World Only)
+----------------------------------------
+B{Parameter:} C{probability_of_rewire}
+
 In a small world experiment, this is the probability that a node will form new edges in an epoch.
 
--- Community Start Structure (Small World Only) (community_start_structure) --
+Community Start Structure (Small World Only)
+--------------------------------------------
+B{Parameter:} C{community_start_structure}
+
 In a small world experiment, this is the structure in which communities will be instantiated. The available options
 are lattice or dense. The lattice is a ring lattice with each node connected to k=2 nearest neighbors. The dense
 structure is a graph in which each node is connected to every other node.
 
--- Initial Set Size (Scale Free Only) (initial_set_size)  --
+Initial Set Size (Scale Free Only)
+----------------------------------
+B{Parameter:} C{initial_set_size}
 
 In a scale free experiment, the initial set size defines the number of buyers who first enter the marketplace. These
 buyers are the first to connect, compare, and purchase items.
 
--- Set Size (Scale Free Only) (set_size) --
+Set Size (Scale Free Only)
+--------------------------
+B{Parameter:} C{set_size}
+
 In a scale free experiment, the set size is the number of buyers added to the marketplace after the initial group.
 
--- Community Bonus (Scale Free Only) (community_bonus)  --
+Community Bonus (Scale Free Only)
+---------------------------------
+B{Parameter:} C{community_bonus}
+
 Mathematically, the community bonus defines how much influence community affiliation has on buyer purchase intention.
 A community bonus of less than 1 means that a buyer is less likely to purchase an item if a majority of their
 community owns that item. A community bonus greater than 1 means that a buyer is more likely to purchase an item if a
 majority of their community owns that item. Theoretically speaking, community bonuses model and test the influence of
 established community affiliation on social connections and economic actions. All agents are sorted into community
-groups during the start up phase of the simulation. A positive (high value) community bonus causes agents to favor
+groups during the start-up phase of the simulation. A positive (high value) community bonus causes agents to favor
 new connections and item comparisons with individuals who share their preexisting community affiliation. A neutral
 community bonus value (1.0) means that no community bonus exists, and social connection and item comparison occur
 based solely on preferential attachment. A negative (low value) community bonus incentivizes agents to connect and
 compare with individuals who do not share their preexisting community affiliation. The community bonus enhancement to
-the scale free network protocol was developed by Sarah T. Wilker, PhD (2023).
+the scale free network protocol was developed by Sarah T. Wilker, PhD (2023). For more information, see: Wilker,
+S. T. 2023. "The Social Life of Ancient Markets: Using Formal Network Approaches and Ceramic Data to Reconceptualize
+Market Behavior in the Late Classical–Early Hellenistic (400–200 BCE) Southeast Aegean." PhD Dissertation,
+Stanford University.
 
 """
 

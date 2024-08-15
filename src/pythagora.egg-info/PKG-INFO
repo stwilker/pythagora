@@ -1,3 +1,16 @@
+Metadata-Version: 2.1
+Name: pythagora
+Version: 0.0.1
+Summary: A Python Package for Modeling the Impact of Social Networks in and Around Market Spaces on Market Outcomes
+Author-email: "Sarah T. Wilker" <swilker@alumni.stanford.edu>, "Annie K. Lamar" <aklamar@ucsb.edu>
+Project-URL: Source, https://github.com/stwilker/pythagora
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: Other/Proprietary License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+
 
 # Pythagora: A Python Package for Modeling the Impact of Social Networks on Market Outcomes
 ### _Developed by Sarah T. Wilker, PhD & Annie K. Lamar, PhD_

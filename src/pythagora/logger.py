@@ -7,10 +7,10 @@ RESULTS FILES
 
 At construction, a directory path is provided to the Logger object. Inside this directory, Logger creates the following:
 
-1. A sub-directory named `/images`, where static network visualizations at each epoch will be stored.
-2. A file named `/buyers.csv`, where information about buyers (their current item, intention, etc.) will be recorded.
-3. A file named `/graphs.csv`, where information about the network will be recorded.
-4. A file named `/matrix.csv`, where information about communities will be recorded.
+    1. A subdirectory named `/images`, where static network visualizations at each epoch will be stored.
+    2. A file named `/buyers.csv`, where information about buyers (their current item, intention, etc.) will be recorded.
+    3. A file named `/graphs.csv`, where information about the network will be recorded.
+    4. A file named `/matrix.csv`, where information about communities will be recorded.
 
 `matrix.csv` records the number of edges between each pair of communities (hence, it is a matrix).
 
@@ -95,8 +95,8 @@ def get_community_distributions(graph):
     """
     Gets distribution of buyers and purchased items in a community.
     The returned distribution graph is of the following form:
-    - Key: community names, Value: [integer, dictionary2]
-    - Key2: purchased item, Value2: number of buyers that purchased that item
+        - Key: community names, Value: [integer, dictionary2]
+        - Key2: purchased item, Value2: number of buyers that purchased that item
     @param graph: graph representing current market state
     @return: tiered dictionary of purchase distributions across communities
     """

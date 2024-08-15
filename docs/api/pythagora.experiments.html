@@ -1,0 +1,634 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  
+
+  <head>
+    
+    <title>pythagora.experiments</title>
+    <meta name="generator" content="pydoctor 24.3.3"> 
+        
+    </meta>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+    <link rel="stylesheet" type="text/css" href="readthedocstheme.css" />
+    <link rel="stylesheet" type="text/css" href="extra.css" />
+</head>
+
+  <body>
+
+    
+
+    <nav class="navbar navbar-default mainnavbar">
+      
+  
+  <div class="container-fluid">
+
+
+    <div class="navbar-header">
+      
+      <div class="navlinks">
+        <span class="navbar-brand">
+          <a href="https://github.com/stwilker/pythagora/" class="projecthome">pythagora</a> <a href="index.html">API Documentation</a>
+        </span>
+
+        <a href="moduleIndex.html">
+          Modules
+        </a>
+
+        <a href="classIndex.html">
+          Classes
+        </a>
+
+        <a href="nameIndex.html">
+          Names
+        </a>
+
+        <div id="search-box-container">
+          <div class="input-group">
+            <input id="search-box" type="search" name="search-query" placeholder="Search..." aria-label="Search" minlength="2" class="form-control" autocomplete="off" />
+            
+            <span class="input-group-btn">
+              <a style="display: none;" class="btn btn-default" id="search-clear-button" title="Clear" onclick="clearSearch()"><img src="fonts/x-circle.svg" alt="Clear" /></a>
+              <a class="btn btn-default" id="search-help-button" title="Help" onclick="toggleSearchHelpText()"><img src="fonts/info.svg" alt="Help" /></a>
+            </span>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+    
+        <!-- Side navigation -->
+      <div class="sidebarcontainer">
+        <nav class="sidebar">
+  
+
+  <div>
+
+      <div class="thingTitle">
+        <span>Module</span>
+        <code class="thisobject"><a href="pythagora.experiments.html" class="internal-link" title="This module">experiments</a></code> 
+      </div>
+      
+      <div>
+         
+          <div class="childrenKindTitle">Contents</div>
+          <ul><li><p class="rst-first"><a class="rst-internal rst-reference" href="#rst-simulationexperiment-types" id="rst-toc-entry-1">Simulation/Experiment Types</a></p>
+<ul class="rst-simple">
+<li><a class="rst-internal rst-reference" href="#rst-small-world-network" id="rst-toc-entry-2">Small-World Network</a></li>
+<li><a class="rst-internal rst-reference" href="#rst-scale-free-network" id="rst-toc-entry-3">Scale-Free Network</a></li>
+<li><a class="rst-internal rst-reference" href="#rst-experimental-controls" id="rst-toc-entry-4">Experimental Controls</a></li>
+</ul>
+</li>
+<li><p class="rst-first"><a class="rst-internal rst-reference" href="#rst-changeable-experiment-parameters" id="rst-toc-entry-5">Changeable Experiment Parameters</a></p>
+<ul class="rst-simple">
+<li><a class="rst-internal rst-reference" href="#rst-number-of-buyers" id="rst-toc-entry-6">Number of Buyers</a></li>
+<li><a class="rst-internal rst-reference" href="#rst-minimum-number-of-communities" id="rst-toc-entry-7">Minimum Number of Communities</a></li>
+<li><a class="rst-internal rst-reference" href="#rst-minimum-community-fill" id="rst-toc-entry-8">Minimum Community Fill</a></li>
+<li><a class="rst-internal rst-reference" href="#rst-assemblage" id="rst-toc-entry-9">Assemblage</a></li>
+<li><a class="rst-internal rst-reference" href="#rst-number-of-epochs" id="rst-toc-entry-10">Number of Epochs</a></li>
+<li><a class="rst-internal rst-reference" href="#rst-upper-threshold" id="rst-toc-entry-11">Upper Threshold</a></li>
+<li><a class="rst-internal rst-reference" href="#rst-lower-threshold" id="rst-toc-entry-12">Lower Threshold</a></li>
+<li><a class="rst-internal rst-reference" href="#rst-death-threshold" id="rst-toc-entry-13">Death Threshold</a></li>
+<li><a class="rst-internal rst-reference" href="#rst-probability-of-rewire-small-world-only" id="rst-toc-entry-14">Probability of Rewire (Small World Only)</a></li>
+<li><a class="rst-internal rst-reference" href="#rst-community-start-structure-small-world-only" id="rst-toc-entry-15">Community Start Structure (Small World Only)</a></li>
+<li><a class="rst-internal rst-reference" href="#rst-initial-set-size-scale-free-only" id="rst-toc-entry-16">Initial Set Size (Scale Free Only)</a></li>
+<li><a class="rst-internal rst-reference" href="#rst-set-size-scale-free-only" id="rst-toc-entry-17">Set Size (Scale Free Only)</a></li>
+<li><a class="rst-internal rst-reference" href="#rst-community-bonus-scale-free-only" id="rst-toc-entry-18">Community Bonus (Scale Free Only)</a></li>
+</ul>
+</li>
+</ul>
+        
+
+        
+         
+
+        
+        
+
+        <div class="childrenKindTitle">Functions</div>
+        <ul>
+    
+    <li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#control_simulation_scale_free" class="internal-link" title="pythagora.experiments.control_simulation_scale_free">control<wbr></wbr>_simulation<wbr></wbr>_scale<wbr></wbr>_free</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#control_simulation_small_world" class="internal-link" title="pythagora.experiments.control_simulation_small_world">control<wbr></wbr>_simulation<wbr></wbr>_small<wbr></wbr>_world</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#scale_free_simulation" class="internal-link" title="pythagora.experiments.scale_free_simulation">scale<wbr></wbr>_free<wbr></wbr>_simulation</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#small_world_simulation" class="internal-link" title="pythagora.experiments.small_world_simulation">small<wbr></wbr>_world<wbr></wbr>_simulation</a></code>
+            </div>
+        
+
+    </li>
+</ul> 
+
+        
+         
+
+        
+         
+
+        
+         
+        
+      </div>
+  </div><div>
+
+      <div class="thingTitle">
+        <span>Package</span>
+        <code><a href="index.html" class="internal-link" title="The parent of this module">pythagora</a></code> 
+      </div>
+      
+      <div>
+        
+
+        <div class="childrenKindTitle">Modules</div>
+        <ul>
+    
+    <li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="pythagora.agents.html" class="internal-link" title="pythagora.agents">agents</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="pythagora.controls.html" class="internal-link" title="pythagora.controls">controls</a></code>
+            </div>
+        
+
+    </li><li class=" thisobject">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="pythagora.experiments.html" class="internal-link" title="pythagora.experiments">experiments</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="pythagora.generate.html" class="internal-link" title="pythagora.generate">generate</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="pythagora.groups.html" class="internal-link" title="pythagora.groups">groups</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="pythagora.logger.html" class="internal-link" title="pythagora.logger">logger</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="pythagora.market.html" class="internal-link" title="pythagora.market">market</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="pythagora.scalefree.html" class="internal-link" title="pythagora.scalefree">scalefree</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="pythagora.smallworld.html" class="internal-link" title="pythagora.smallworld">smallworld</a></code>
+            </div>
+        
+
+    </li>
+</ul> 
+
+        
+        
+
+        
+         
+
+        
+         
+
+        
+         
+
+        
+         
+        
+      </div>
+  </div>
+
+</nav>
+        <!-- No sidebar toggle for read the docs theme, the sidebar is always
+          visible when the screen is width enough.
+        -->
+      </div>
+
+    </nav>
+    
+    <div class="container-fluid">
+
+      <div id="main" class="">
+        
+
+        
+
+        <div id="search-results-container" style="display: none;">
+        
+          <div id="search-buttons">
+            <span class="label label-default" id="search-docstrings-button">
+            <label class="checkbox-inline">
+              <input type="checkbox" id="toggle-search-in-docstrings-checkbox" value="false" onclick="toggleSearchInDocstrings()">
+                search in docstrings
+              </input>
+            </label>
+            </span>
+            
+          </div>
+          
+          <noscript>
+              <h1>Cannot search: JavaScript is not supported/enabled in your browser.</h1>
+          </noscript>
+  
+          <div class="hint" id="search-help-box">
+            <p class="rst-last">
+        
+              Search bar offers the following options:
+              <ul>   
+                  <li>
+                    <strong>Term presence.</strong> The below example searches for documents that 
+                      must contain “foo”, might contain “bar” and must not contain “baz”: <code>+foo bar -baz</code>
+                  </li> 
+  
+                  <li>
+                    <strong>Wildcards.</strong> The below example searches for documents with words beginning with “foo”: <code>foo*</code>
+                  </li> 
+  
+                  <li>
+                    <strong>Search in specific fields.</strong> The following search matches all objects 
+                    in "twisted.mail" that matches “search”: <code>+qname:twisted.mail.* +search</code>
+  
+                    <p>
+                      Possible fields: 'name', 'qname' (fully qualified name), 'docstring', and 'kind'.
+                      Last two fields are only applicable if "search in docstrings" is enabled.
+                    </p>
+                  </li>
+  
+                  <li>
+                    <strong>Fuzzy matches.</strong> The following search matches all documents 
+                    that have a word within 1 edit distance of “foo”: <code>foo~1</code>
+                  </li>
+              </ul>
+  
+            </p>
+          </div>
+  
+          <div id="search-status"> </div>
+  
+          <div class="warning" id="search-warn-box" style="display: none;">
+            <p class="rst-last"><span id="search-warn"></span></p>
+          </div>
+  
+          <table id="search-results">
+            <!-- Filled dynamically by JS -->
+          </table>
+          
+          <div style="margin-top: 8px;">
+            <p>Results provided by <a href="https://lunrjs.com">Lunr.js</a></p>
+          </div>
+        </div>
+
+        <div class="page-header">
+          <h1 class="module"><code><code><a href="index.html" class="internal-link">pythagora</a></code><wbr></wbr>.<code><a href="pythagora.experiments.html" class="internal-link" title="pythagora.experiments">experiments</a></code></code></h1>
+          <div id="showPrivate">
+            <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+          </div>
+        </div>
+
+        <div class="categoryHeader">
+          module documentation
+        </div>
+
+        <div class="extrasDocstring">
+          
+          <p></p>
+        </div>
+
+        <div class="moduleDocstring">
+          <div><p>The experiments module is the primary module with which users will interact. From this module, you can run every kind of experiment and adjust every parameter.</p>
+<div class="rst-section" id="rst-simulationexperiment-types">
+<h2 class="heading">Simulation/Experiment Types</h2>
+<p>This module implements two main network protocols: small-world and scale-free. For both types, we also implement a control model.</p>
+<div class="rst-section" id="rst-small-world-network">
+<h3 class="heading">Small-World Network</h3>
+<p>The small-world experiment tests how consumption practices among individual communities change as they become more interconnected. When the small-world experiment starts, buyers are very well-connected to their individual community (high clustering) and very disconnected from those outside of their community (long average path length). As the experiment runs, random “rewired” connections link agents in different communities, shortening the distance between individual communities and reducing the amount of clustering in the network. Over time, different communities become so well-connected (short average path length) that there is no significant clustering within individual communities. The network becomes a small-network for a limited time between these two extremes, specifically when the network has relatively high clustering within individual communities and relatively short path lengths between agents across communities. The Small-world experiment can be run with different start structures (details in experiment options below).</p>
+</div>
+<div class="rst-section" id="rst-scale-free-network">
+<h3 class="heading">Scale-Free Network</h3>
+<p>The scale-free experiment tests how consumption practices change among communities of buyers change as they join a scale-free social network. In scale-free networks, agents are added to the social network over time (network growth). These additional agents connect to those already in the network through the process of preferential attachment, which means that agents that have more social connections already will gain more connections over time than those with fewer starting connections. A novel feature of this package is the “community bonus” parameter, which allows you to test how preexisting community affiliation impacts purchasing preferences. Buyers entering the simulation are assigned an initial community designation, and when the community bonus is set at greater than 1.0, buyers are incentivized to connect and compare with those who share their existing community designation. When the community bonus is set at less than 1.0, buyers are incentivized to connect and compare with those who do not share their community affiliation. When simulations are run without a community bonus, buyers are motivated to connect with the most popular individual in their network (preferential attachment) regardless of personal closeness.</p>
+</div>
+<div class="rst-section" id="rst-experimental-controls">
+<h3 class="heading">Experimental Controls</h3>
+<p>To create a control (or comparison) to a small-world model, a random network is constructed with all of the buyers in the market. Agents are initially connected to four random agents regardless of designated community affiliation, rather than being connected within their existing community groups as is the case in the small-world experiment. Following this set up, connections are formed and rewired in the same way as those in the small-world experiment.</p>
+<p>The scale-free control tests how social networks between buyers change when a network grows randomly over time. The fundamental difference between a scale-free network and a random network is the presence of preferential attachment, which means that a random growth network when compared to the scale-free network can specifically examine the impact of preferential attachment on purchasing preferences. The scale-free control network can be run with or without the “community bonus” parameter, which means it can also test the impact of preexisting community designation on social connection and consumer behavior.</p>
+</div>
+</div>
+<div class="rst-section" id="rst-changeable-experiment-parameters">
+<h2 class="heading">Changeable Experiment Parameters</h2>
+<div class="rst-section" id="rst-number-of-buyers">
+<h3 class="heading">Number of Buyers</h3>
+<p><strong>Parameter:</strong> <tt class="rst-docutils rst-literal">number_of_buyers</tt></p>
+<p>How many buyers do you want in your market simulation?</p>
+</div>
+<div class="rst-section" id="rst-minimum-number-of-communities">
+<h3 class="heading">Minimum Number of Communities</h3>
+<p><strong>Parameter:</strong> <tt class="rst-docutils rst-literal">minimum_number_of_communities</tt></p>
+<p>What is the minimum number of buyer communities in the market simulation?</p>
+</div>
+<div class="rst-section" id="rst-minimum-community-fill">
+<h3 class="heading">Minimum Community Fill</h3>
+<p><strong>Parameter:</strong> <tt class="rst-docutils rst-literal">minimum_community_fill</tt></p>
+<p>What is the minimum number of buyers that must be in a community for the community to exist?</p>
+</div>
+<div class="rst-section" id="rst-assemblage">
+<h3 class="heading">Assemblage</h3>
+<p><strong>Parameter:</strong> <tt class="rst-docutils rst-literal">assemblage</tt></p>
+<p>The list of items for sale in the marketplace. We use the word `assemblage` because this software was developed for analysis of ancient ceramics markets; the algorithms work the same for any list of items and are not field specific.</p>
+</div>
+<div class="rst-section" id="rst-number-of-epochs">
+<h3 class="heading">Number of Epochs</h3>
+<p><strong>Parameter:</strong> <tt class="rst-docutils rst-literal">number_of_epochs</tt></p>
+<p>Number of market or purchasing iterations to run in the simulation. This is how many times the buyers will purchase items from the market.</p>
+</div>
+<div class="rst-section" id="rst-upper-threshold">
+<h3 class="heading">Upper Threshold</h3>
+<p><strong>Parameter:</strong> <tt class="rst-docutils rst-literal">upper_threshold</tt></p>
+<p>The upper threshold is the percentage of buyers that must own a particular item to change a buyer's purchasing intention to the dominant item. For a given hypothetical buyer, if the percentage of their social connections (graph neighbors) purchasing the same item is greater than or equal to their upper threshold, they change their intention to purchase that item. In short: How popular does a particular item need to be to begin influencing others' purchase decisions (and be worth the cost and risk associated with changing one's behavior)?</p>
+</div>
+<div class="rst-section" id="rst-lower-threshold">
+<h3 class="heading">Lower Threshold</h3>
+<p><strong>Parameter:</strong> <tt class="rst-docutils rst-literal">lower_threshold</tt></p>
+<p>The lower threshold is the maximum percentage of buyers that may own a particular item to change a buyer's purchasing intention to a random item. For a given hypothetical buyer, if the percentage of their social connections (graph neighbors) purchasing any possible item is less than the lower threshold, the buyer changes their intention to purchase a random item. In short: How unpopular does a particular item need to be to cause a buyer to purchase a new item at random (retaining no loyalty to the item they currently own)?</p>
+</div>
+<div class="rst-section" id="rst-death-threshold">
+<h3 class="heading">Death Threshold</h3>
+<p><strong>Parameter:</strong> <tt class="rst-docutils rst-literal">death_threshold</tt></p>
+<p>The death threshold is the percentage at which a pot is removed from the market. If the demand for a pot (i.e. buyers who purchased that pot) drops below the death threshold, then the pot is removed from the market. If a Seller was selling this item, they are automatically assigned the most popular item.  In short: How unpopular does an item need to be before it is removed from the market altogether?</p>
+</div>
+<div class="rst-section" id="rst-probability-of-rewire-small-world-only">
+<h3 class="heading">Probability of Rewire (Small World Only)</h3>
+<p><strong>Parameter:</strong> <tt class="rst-docutils rst-literal">probability_of_rewire</tt></p>
+<p>In a small world experiment, this is the probability that a node will form new edges in an epoch.</p>
+</div>
+<div class="rst-section" id="rst-community-start-structure-small-world-only">
+<h3 class="heading">Community Start Structure (Small World Only)</h3>
+<p><strong>Parameter:</strong> <tt class="rst-docutils rst-literal">community_start_structure</tt></p>
+<p>In a small world experiment, this is the structure in which communities will be instantiated. The available options are lattice or dense. The lattice is a ring lattice with each node connected to k=2 nearest neighbors. The dense structure is a graph in which each node is connected to every other node.</p>
+</div>
+<div class="rst-section" id="rst-initial-set-size-scale-free-only">
+<h3 class="heading">Initial Set Size (Scale Free Only)</h3>
+<p><strong>Parameter:</strong> <tt class="rst-docutils rst-literal">initial_set_size</tt></p>
+<p>In a scale free experiment, the initial set size defines the number of buyers who first enter the marketplace. These buyers are the first to connect, compare, and purchase items.</p>
+</div>
+<div class="rst-section" id="rst-set-size-scale-free-only">
+<h3 class="heading">Set Size (Scale Free Only)</h3>
+<p><strong>Parameter:</strong> <tt class="rst-docutils rst-literal">set_size</tt></p>
+<p>In a scale free experiment, the set size is the number of buyers added to the marketplace after the initial group.</p>
+</div>
+<div class="rst-section" id="rst-community-bonus-scale-free-only">
+<h3 class="heading">Community Bonus (Scale Free Only)</h3>
+<p><strong>Parameter:</strong> <tt class="rst-docutils rst-literal">community_bonus</tt></p>
+<p>Mathematically, the community bonus defines how much influence community affiliation has on buyer purchase intention. A community bonus of less than 1 means that a buyer is less likely to purchase an item if a majority of their community owns that item. A community bonus greater than 1 means that a buyer is more likely to purchase an item if a majority of their community owns that item. Theoretically speaking, community bonuses model and test the influence of established community affiliation on social connections and economic actions. All agents are sorted into community groups during the start-up phase of the simulation. A positive (high value) community bonus causes agents to favor new connections and item comparisons with individuals who share their preexisting community affiliation. A neutral community bonus value (1.0) means that no community bonus exists, and social connection and item comparison occur based solely on preferential attachment. A negative (low value) community bonus incentivizes agents to connect and compare with individuals who do not share their preexisting community affiliation. The community bonus enhancement to the scale free network protocol was developed by Sarah T. Wilker, PhD (2023). For more information, see: Wilker, S. T. 2023. "The Social Life of Ancient Markets: Using Formal Network Approaches and Ceramic Data to Reconceptualize Market Behavior in the Late Classical–Early Hellenistic (400–200 BCE) Southeast Aegean." PhD Dissertation, Stanford University.</p>
+</div>
+</div>
+</div>
+        </div>
+
+        <div id="splitTables">
+          <table class="children sortable" id="id6">
+  
+  
+  <tr class="function">
+    
+    <td>Function</td>
+    <td><code><a href="#control_simulation_scale_free" class="internal-link" title="pythagora.experiments.control_simulation_scale_free">control<wbr></wbr>_simulation<wbr></wbr>_scale<wbr></wbr>_free</a></code></td>
+    <td>Run a control experiment using scale free network protocol.</td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><code><a href="#control_simulation_small_world" class="internal-link" title="pythagora.experiments.control_simulation_small_world">control<wbr></wbr>_simulation<wbr></wbr>_small<wbr></wbr>_world</a></code></td>
+    <td>Run a control simulation using small world network protocol.</td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><code><a href="#scale_free_simulation" class="internal-link" title="pythagora.experiments.scale_free_simulation">scale<wbr></wbr>_free<wbr></wbr>_simulation</a></code></td>
+    <td>Run a scale free simulation.</td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><code><a href="#small_world_simulation" class="internal-link" title="pythagora.experiments.small_world_simulation">small<wbr></wbr>_world<wbr></wbr>_simulation</a></code></td>
+    <td>Run a small world simulation.</td>
+  </tr>
+</table>
+          
+
+            
+        </div>
+
+        <div id="childList">
+          <div class="basefunction">
+  
+  
+  <a name="pythagora.experiments.control_simulation_scale_free">
+    
+  </a>
+  <a name="control_simulation_scale_free">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">control_simulation_scale_free</span><span class="function-signature">(number_of_buyers, minimum_number_of_communities, minimum_community_fill, assemblage, number_of_epochs, upper_threshold, lower_threshold, death_threshold, results_directory, initial_set_size, set_size, community_bonus, verbose=<a href="https://docs.python.org/3/library/constants.html#True" class="intersphinx-link">True</a>)</span>:
+    
+    <a class="headerLink" href="#control_simulation_scale_free" title="pythagora.experiments.control_simulation_scale_free">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Run a control experiment using scale free network protocol.</p><table class="fieldTable"><tr class="fieldStart"><td class="fieldName" colspan="2">Parameters</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">number<wbr></wbr>_of<wbr></wbr>_buyers</span></td><td class="fieldArgDesc">number of buyers in marketspace</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">minimum<wbr></wbr>_number<wbr></wbr>_of<wbr></wbr>_communities</span></td><td class="fieldArgDesc">minimum number of communities to which buyers belong</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">minimum<wbr></wbr>_community<wbr></wbr>_fill</span></td><td class="fieldArgDesc">minimum number of buyers per community</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">assemblage</span></td><td class="fieldArgDesc">list of items for sale in marketspace</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">number<wbr></wbr>_of<wbr></wbr>_epochs</span></td><td class="fieldArgDesc">number of epochs (purchase cycles)</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">upper<wbr></wbr>_threshold</span></td><td class="fieldArgDesc">% of buyers that must own a particular item to change a buyer's intention to that item</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">lower<wbr></wbr>_threshold</span></td><td class="fieldArgDesc">max % of buyers that may own a particular item to change a buyer's intention to random item</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">death<wbr></wbr>_threshold</span></td><td class="fieldArgDesc">percentage at which an item is removed from the market</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">results<wbr></wbr>_directory</span></td><td class="fieldArgDesc">path to directory to store results files</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">initial<wbr></wbr>_set<wbr></wbr>_size</span></td><td class="fieldArgDesc">number of buyers in market at initialization</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">set<wbr></wbr>_size</span></td><td class="fieldArgDesc">number of buyers added to market after initialization</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">community<wbr></wbr>_bonus</span></td><td class="fieldArgDesc">degree to which community affiliation impacts purchase intention</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">verbose</span></td><td class="fieldArgDesc">if True, will print time log updates to screen</td></tr></table></div>
+  </div>
+</div><div class="basefunction">
+  
+  
+  <a name="pythagora.experiments.control_simulation_small_world">
+    
+  </a>
+  <a name="control_simulation_small_world">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">control_simulation_small_world</span><span class="function-signature">(number_of_buyers, minimum_number_of_communities, minimum_community_fill, assemblage, epochs, upper_threshold, lower_threshold, death_threshold, results_directory, rewire_prob, link_prob=0.5, verbose=<a href="https://docs.python.org/3/library/constants.html#True" class="intersphinx-link">True</a>)</span>:
+    
+    <a class="headerLink" href="#control_simulation_small_world" title="pythagora.experiments.control_simulation_small_world">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Run a control simulation using small world network protocol.</p><table class="fieldTable"><tr class="fieldStart"><td class="fieldName" colspan="2">Parameters</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">number<wbr></wbr>_of<wbr></wbr>_buyers</span></td><td class="fieldArgDesc">number of buyers in marketspace</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">minimum<wbr></wbr>_number<wbr></wbr>_of<wbr></wbr>_communities</span></td><td class="fieldArgDesc">minimum number of communities to which buyers belong</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">minimum<wbr></wbr>_community<wbr></wbr>_fill</span></td><td class="fieldArgDesc">minimum number of buyers per community</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">assemblage</span></td><td class="fieldArgDesc">list of items for sale in marketspace</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">epochs</span></td><td class="fieldArgDesc">number of epochs (purchase cycles)</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">upper<wbr></wbr>_threshold</span></td><td class="fieldArgDesc">% of buyers that must own a particular item to change a buyer's intention to that item</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">lower<wbr></wbr>_threshold</span></td><td class="fieldArgDesc">max % of buyers that may own a particular item to change a buyer's intention to random item</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">death<wbr></wbr>_threshold</span></td><td class="fieldArgDesc">percentage at which an item is removed from the market</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">results<wbr></wbr>_directory</span></td><td class="fieldArgDesc">path to directory to store results files</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">rewire<wbr></wbr>_prob</span></td><td class="fieldArgDesc">probability that a node will form new edges in an epoch</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">link<wbr></wbr>_prob</span></td><td class="fieldArgDesc">probability any two nodes (buyers) will be linked in random graph initialization</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">verbose</span></td><td class="fieldArgDesc">verbose: if True, will print time log updates to screen</td></tr></table></div>
+  </div>
+</div><div class="basefunction">
+  
+  
+  <a name="pythagora.experiments.scale_free_simulation">
+    
+  </a>
+  <a name="scale_free_simulation">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">scale_free_simulation</span><span class="function-signature">(number_of_buyers, minimum_number_of_communities, minimum_community_fill, assemblage, number_of_epochs, upper_threshold, lower_threshold, death_threshold, results_directory, initial_set_size, set_size, community_bonus, verbose=<a href="https://docs.python.org/3/library/constants.html#True" class="intersphinx-link">True</a>)</span>:
+    
+    <a class="headerLink" href="#scale_free_simulation" title="pythagora.experiments.scale_free_simulation">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Run a scale free simulation.</p><table class="fieldTable"><tr class="fieldStart"><td class="fieldName" colspan="2">Parameters</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">number<wbr></wbr>_of<wbr></wbr>_buyers</span></td><td class="fieldArgDesc">number of buyers in marketspace</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">minimum<wbr></wbr>_number<wbr></wbr>_of<wbr></wbr>_communities</span></td><td class="fieldArgDesc">minimum number of communities to which buyers belong</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">minimum<wbr></wbr>_community<wbr></wbr>_fill</span></td><td class="fieldArgDesc">minimum number of buyers per community</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">assemblage</span></td><td class="fieldArgDesc">list of items for sale in marketspace</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">number<wbr></wbr>_of<wbr></wbr>_epochs</span></td><td class="fieldArgDesc">number of epochs (purchase cycles)</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">upper<wbr></wbr>_threshold</span></td><td class="fieldArgDesc">% of buyers that must own a particular item to change a buyer's intention to that item</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">lower<wbr></wbr>_threshold</span></td><td class="fieldArgDesc">max % of buyers that may own a particular item to change a buyer's intention to random item</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">death<wbr></wbr>_threshold</span></td><td class="fieldArgDesc">percentage at which an item is removed from the market</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">results<wbr></wbr>_directory</span></td><td class="fieldArgDesc">path to directory to store results files</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">initial<wbr></wbr>_set<wbr></wbr>_size</span></td><td class="fieldArgDesc">number of buyers in market at initialization</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">set<wbr></wbr>_size</span></td><td class="fieldArgDesc">number of buyers added to market after initialization</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">community<wbr></wbr>_bonus</span></td><td class="fieldArgDesc">degree to which community affiliation impacts purchase intention</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">verbose</span></td><td class="fieldArgDesc">if True, will print time log updates to screen</td></tr></table></div>
+  </div>
+</div><div class="basefunction">
+  
+  
+  <a name="pythagora.experiments.small_world_simulation">
+    
+  </a>
+  <a name="small_world_simulation">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">small_world_simulation</span><span class="function-signature">(number_of_buyers, minimum_number_of_communities, minimum_community_fill, assemblage, number_of_epochs, upper_threshold, lower_threshold, death_threshold, results_directory, probability_of_rewire=0.5, community_start_structure=<span class="rst-variable-quote">'</span><span class="rst-variable-string">dense</span><span class="rst-variable-quote">'</span>, verbose=<a href="https://docs.python.org/3/library/constants.html#True" class="intersphinx-link">True</a>)</span>:
+    
+    <a class="headerLink" href="#small_world_simulation" title="pythagora.experiments.small_world_simulation">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Run a small world simulation.</p><table class="fieldTable"><tr class="fieldStart"><td class="fieldName" colspan="2">Parameters</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">number<wbr></wbr>_of<wbr></wbr>_buyers</span></td><td class="fieldArgDesc">number of buyers in marketspace</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">minimum<wbr></wbr>_number<wbr></wbr>_of<wbr></wbr>_communities</span></td><td class="fieldArgDesc">minimum number of communities to which buyers belong</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">minimum<wbr></wbr>_community<wbr></wbr>_fill</span></td><td class="fieldArgDesc">minimum number of buyers per community</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">assemblage</span></td><td class="fieldArgDesc">list of items for sale in marketspace</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">number<wbr></wbr>_of<wbr></wbr>_epochs</span></td><td class="fieldArgDesc">number of epochs (purchase cycles)</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">upper<wbr></wbr>_threshold</span></td><td class="fieldArgDesc">% of buyers that must own a particular item to change a buyer's intention to that item</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">lower<wbr></wbr>_threshold</span></td><td class="fieldArgDesc">max % of buyers that may own a particular item to change a buyer's intention to random item</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">death<wbr></wbr>_threshold</span></td><td class="fieldArgDesc">percentage at which an item is removed from the market</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">results<wbr></wbr>_directory</span></td><td class="fieldArgDesc">path to directory to store results files</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">probability<wbr></wbr>_of<wbr></wbr>_rewire</span></td><td class="fieldArgDesc">probability that a node will form new edges in an epoch</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">community<wbr></wbr>_start<wbr></wbr>_structure</span></td><td class="fieldArgDesc">structure in which communities will be instantiated</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">verbose</span></td><td class="fieldArgDesc">if True, will print time log updates to screen</td></tr></table></div>
+  </div>
+</div>
+        </div>
+      
+      </div>
+    </div>
+
+    <footer class="navbar navbar-default">
+    <hr />
+    
+    
+    <div class="container">
+      <a href="index.html">API Documentation</a> for <a href="https://github.com/stwilker/pythagora/" class="projecthome">pythagora</a>,
+    generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a>
+      24.3.3 at 2024-08-15 16:14:21.
+    </div>
+    
+    <script src="ajax.js" type="text/javascript"></script>
+    <script src="searchlib.js" type="text/javascript"></script>
+    <script src="search.js" type="text/javascript"></script>
+  
+  </footer>
+  
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>
