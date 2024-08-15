@@ -44,7 +44,7 @@ def check_for_pot_death(G, death_threshold):
     Checks if any items are to be removed from the market.
     @param G: graph representing current market state
     @param death_threshold: percentage at which an item is removed from the market
-    @return: list of remaining items in marketspace
+    @return: list of remaining items in market
     """
     all_pots = collections.defaultdict(int)
     for buyer in G:

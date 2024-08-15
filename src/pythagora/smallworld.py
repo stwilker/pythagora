@@ -1,5 +1,5 @@
 """
-This module contains methods to initialize and compute metrics for a small world simulation.
+This module contains methods to initialize and compute metrics for a small-world simulation.
 """
 
 import networkx as nx
@@ -127,7 +127,7 @@ def connect_initial_communities(G):
                 community_dict[buyer.community].append(buyer)
             else:
                 community_dict[buyer.community] = [buyer]
-        # select our random nodes
+        # select our random nodes (one node from each community)
         random_nodes = []
         for community in community_dict.keys():
             random_nodes.append(random.choice(community_dict[community]))
@@ -145,16 +145,16 @@ def connect_initial_communities(G):
                 delete_edges.append(rand_edge_prev_node)
                 is_first_node = False
             else:
-                new_edges.append([prev_node, node])
+                new_edges.append([prev_node, node])  # prev_node will always be set
                 if len(list(G.edges(node))) == 0:
                     raise RuntimeError("Minimum community fill too small to ensure connectivity.")
                 rand_edge_current = random.choice(list(G.edges(node)))
                 delete_edges.append(rand_edge_current)
                 prev_node = node
-        new_edges.append([first_node, node])
-        for e in new_edges:
+        new_edges.append([first_node, node])  # connect first to last outside the loop
+        for e in new_edges:  # new_edges is a list of lists; defines nodes to connect
             G.add_edge(e[0], e[1])
-        for r in delete_edges:
+        for r in delete_edges:  # nodes that get rewired have old edges deleted
             if (r[0], r[1]) in G.edges:
                 G.remove_edge(r[0], r[1])
     return G
@@ -201,10 +201,10 @@ def net_avg_degree(G):
     @param G: target graph for computation
     @return: average degree of nodes in a graph
     """
-    degree_object = G.degree() # returns list of degrees as tuples
+    degree_object = G.degree()  # returns list of degrees as tuples
     total_degree = 0
     for pair in degree_object:
-        total_degree += pair[1] # add all degrees
+        total_degree += pair[1]  # add all degrees
     return total_degree / len(degree_object)
 
 
