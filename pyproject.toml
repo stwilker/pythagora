@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pythagora"
+version = "1.0.0"
+authors = [
+  { name="Sarah T. Wilker", email="swilker@alumni.stanford.edu" },
+    {name="Annie K. Lamar", email="aklamar@ucsb.edu"},
+]
+description = "A Python Package for Modeling the Impact of Social Networks on Market Outcomes"
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: Other/Proprietary License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Source = "https://github.com/stwilker/pythagora"
+Docs = "https://stwilker.github.io/pythagora"

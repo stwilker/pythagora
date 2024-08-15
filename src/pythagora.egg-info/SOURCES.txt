@@ -1,0 +1,17 @@
+LICENSE.txt
+README.md
+pyproject.toml
+src/pythagora/__init__.py
+src/pythagora/agents.py
+src/pythagora/controls.py
+src/pythagora/experiments.py
+src/pythagora/generate.py
+src/pythagora/groups.py
+src/pythagora/logger.py
+src/pythagora/market.py
+src/pythagora/scalefree.py
+src/pythagora/smallworld.py
+src/pythagora.egg-info/PKG-INFO
+src/pythagora.egg-info/SOURCES.txt
+src/pythagora.egg-info/dependency_links.txt
+src/pythagora.egg-info/top_level.txt
