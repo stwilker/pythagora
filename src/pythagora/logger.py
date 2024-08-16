@@ -1,9 +1,8 @@
 """This module implements the Logger class and its supporting methods. The Logger class is the key to accessing
 results from social network experiments without writing any analysis code in Python.
 
--------------
 RESULTS FILES
--------------
+=============
 
 At construction, a directory path is provided to the Logger object. Inside this directory, Logger creates the following:
 
@@ -17,9 +16,8 @@ At construction, a directory path is provided to the Logger object. Inside this 
 In addition, experimental metadata is recorded in an info file at the beginning of any experiment (see: scalefree.py
 and smallworld.py).
 
-----------
 TIMESTAMPS
-----------
+==========
 
 The Logger object records the market state at every timestamp. A timestamp is a tuple that contains an
 epoch and a timestep.
@@ -34,9 +32,8 @@ timesteps in each epoch. In a scale free experiment, a timestep is every instanc
 random reassignment of purchase intention. If there are `n` nodes in the graph, then there will be `n` timesteps in
 each epoch.
 
------------
 MAC OS USERS
------------
+============
 
 Eigenvector centrality as implemented through NetworkX has limited functionality
 on MacOS. If you encounter an error when computing eigenvector centrality, change the default parameter `macOS` in
