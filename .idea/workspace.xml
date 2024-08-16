@@ -5,21 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="65312264-0057-4445-8d0d-17e37806ae1f" name="Changes" comment="Control experiments refactored; documentation updated">
-      <change afterPath="$PROJECT_DIR$/dist/pythagora-0.0.1-py3-none-any.whl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/pythagora-0.0.1.tar.gz" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pythagora.egg-info/PKG-INFO" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pythagora.egg-info/SOURCES.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pythagora.egg-info/dependency_links.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pythagora.egg-info/top_level.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.github/workflows/draft-pdf.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JOSS/paper.bib" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JOSS/paper.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pyproject.toml" beforeDir="false" afterPath="$PROJECT_DIR$/pyproject.toml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pythagora_tutorial.ipynb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pythagora/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/pythagora/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pythagora/agents.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/pythagora/agents.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pythagora/experiments.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/pythagora/experiments.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pythagora/logger.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/pythagora/logger.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pythagora/market.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/pythagora/market.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pythagora/smallworld.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/pythagora/smallworld.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,24 +51,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;development&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/karaa/OneDrive/Documents/Python Packages/pythagora&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "C:/Users/karaa/OneDrive/Documents/Python Packages/pythagora",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.editor",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\karaa\OneDrive\Documents\Python Packages\pythagora\JOSS" />
       <recent name="C:\Users\karaa\OneDrive\Documents\Python Packages\pythagora\src\pythagora" />
     </key>
   </component>
@@ -110,6 +101,7 @@
       <workItem from="1723747442720" duration="4670000" />
       <workItem from="1723756517982" duration="2588000" />
       <workItem from="1723759912873" duration="3697000" />
+      <workItem from="1723835710011" duration="4521000" />
     </task>
     <task id="LOCAL-00001" summary="Control experiments refactored; documentation updated">
       <option name="closed" value="true" />

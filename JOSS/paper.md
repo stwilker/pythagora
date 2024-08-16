@@ -1,26 +1,52 @@
 
-# Pythagora: A Python Package for Modeling the Impact of Social Networks on Market Outcomes
-### _Developed by Sarah T. Wilker, PhD & Annie K. Lamar, PhD_
+---
+title: 'Pythagora: A Python Package for Modeling the Impact of Social Networks on Market Outcomes'
+tags:
+  - Python
+  - economics
+  - archaeology
+  - networks
+  - agent based modeling
+authors:
+  - name: Sarah T. Wilker
+    orcid: 0009-0003-2385-0956
+    equal-contrib: true
+    affiliation: 1
+  - name: Annie K. Lamar
+    orcid: 0000-0002-0562-9444
+    equal-contrib: true 
+    affiliation: 2
 
-## Citation
+affiliations:
+ - name: Thomas F. Cooper Post-doctoral Fellow and Visiting Assistant Professor of Classics, Oberlin College, USA
+   index: 1
+ - name: Assistant Professor of Computational Classics, University of California, Santa Barbara, USA
+   index: 2
 
-Wilker, S.T. and Lamar, A.K. _Pythagora_. Version 1.0.0. github.com/stwilker/pythagora. 2024.
+date: 19 August 2024
+bibliography: paper.bib
+---
 
-## Author Contributions
+# Summary
 
-The below author contribution statement was developed based on the CRediT (Contributor Roles Taxonomy) framework. 
+The word _agora_ is an ancient Greek word meaning "marketplace." In the ancient Greek world, the _agora_ was more than a market, however. The _agora_ served also served as a place for gathering with one's community, catching up on the news, and participating in democratic processes. `Pythagora` (**py**th**agora**) allows you to model market environments beyond simple supply and demand economics by introducing community interactions to market simulations. 
 
-**S.T. Wilker**: Conceptualization, Methodology, Software, Validation, Formal Analysis, Investigation, Data Curation, Writing - Original Draft, Writing - Review & Editing; **A.K. Lamar**: Software, Validation, Formal Analysis, Data Curation, Writing - Review & Editing, Visualization
+`Pythagora` is an agent-based modeling package that allows for the construction of experiments to test the impact of select types of social networks on production and consumption outcomes. Specifically, `Pythagora` simulates how individuals (agents) in small-world social networks and scale-free social networks (as well as control versions of these networks) buy and sell different items based on interactions within their social networks. 
 
-# Project Description
-_Pythagora_ is an agent-based modeling package that allows for the construction of experiments to test the impact of select types of social networks on production and consumption outcomes. Specifically, _Pythagora_ simulates how individuals (agents) in small-world social networks and scale-free social networks (as well as control versions of these networks) buy and sell different items based on interactions within their social networks. 
+Agents in `Pythagora` have complex social lives: they belong to communities and are connected in social networks both inside and outside those communities. The purpose of this multidimensional social landscape is to test the impact of different types of social relationships on what individual agents buy and sell, and how these individual transactions build over time to create long-term production and consumption trends. 
 
-Agents in _Pythagora_ have complex social lives: they belong to communities and are connected in social networks both inside and outside those communities. The purpose of this multidimensional social landscape is to test the impact of different types of social relationships on what individual agents buy and sell, and how these individual transactions build over time to create long-term production and consumption trends. 
+# Statement of need
 
-While _Pythagora_ was designed to test popularity changes in pottery styles in the ancient Mediterranean world, it 
-can be used to test popularity changes for any type of object during any time period.   
+`Pythagora` is the first software package to introduce the concept of community-based incentives to agent-based market models. This is a new and exciting contribution to the field of social network analysis; users can now run experiments and market simulations that consider the influence of social networks on buyer purchase decisions. 
 
-# Installation & Dependencies
+One major advantage of `Pythagora` for users is its ease of use and installation. Many other agent-based modeling environments (e.g. Netlogo [@wilensky_netlogo_1999]) require standalone software downloads; this restricts researchers' ability to change parameters, design custom experiments, and perform novel data analyses. `Pythagora` also relies heavily on and
+interfaces well with the existing functions in the `NetworkX` Python package [@hagberg_exploring_2008], making integrating experiments from `Pythagora` into an existing research pipeline a streamlined process. 
+
+Finally, `Pythagora` allows users to run experiments with a single method call, increasing accessibility for researchers without substantial coding experience. The results of experiments are stored in .csv files, making it easy for researchers to load results into a Pandas Dataframe or Excel, depending on their research team's skills and preferences.
+
+`Pythagora` was designed to be used by researchers in a variety of fields, including and especially economics, cultural analytics, or network science. The package has already by implemented and cited in a recent dissertation [@wilker_social_2023] and forthcoming (2024) article in the _Journal on Hellenistic and Roman Material Culture_ [@wilker_toasting_nodate]. 
+
+# Installation & Documentation
 
 To install _Pythagora_, you can use pip:
 
@@ -30,7 +56,11 @@ _Pythagora_ also requires NetworkX (3.2), which can be installed by running this
 
 `pip install networkx==3.2`
 
-# Quick Start
+A full API documentation is available at [stwilker.github.io/pythagora](https://stwilker.github.io/pythagora). Users will find the documentation on experiment types and changeable parameters in the [`experiments.py` module here](https://stwilker.github.io/pythagora/pythagora.experiments.html).
+
+To submit a feature request or report an issue, users should use [GitHub's issue tracker](https://github.com/stwilker/pythagora/issues).
+
+# Getting Started
 
 _Pythagora_ allows you to customize your agent-based market simulations in several ways. There are two general network protocols to choose from: small-world and scale-free. Within each type of algorithm there are several adjustable parameters; detailed information about each parameter is available in the documentation. 
 
@@ -108,3 +138,13 @@ experiments.small_world_control(number_of_buyers=50,
                                 link_prob=0.5, 
                                 verbose=True)
 ```
+
+# Software History & Author Contributions
+
+`Pythagora` has been in development since 2022. It was first used to generate experimental data for Sarah T. Wilker's doctoral dissertation at Stanford University [@wilker_social_2023]. `Pythagora` has been significantly expanded over the past two years, including a complete refactoring of the experimental pipeline.
+
+The below author contribution statement was developed based on the [CRediT](credit.niso.org) (Contributor Roles Taxonomy) framework. 
+
+**S.T. Wilker**: Conceptualization, Methodology, Software, Validation, Formal Analysis, Investigation, Data Curation, Writing - Original Draft, Writing - Review & Editing; **A.K. Lamar**: Software, Validation, Formal Analysis, Data Curation, Writing - Review & Editing, Visualization
+
+# References
