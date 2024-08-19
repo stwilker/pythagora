@@ -169,13 +169,9 @@ from . import controls
 from . import market
 from . import generate
 from . import logger
-from logger import Logger
 from datetime import timedelta
 import time
 import random
-from importlib import reload
-
-reload(logger)  # fixes some file cacheing issues
 
 
 def small_world_simulation(number_of_buyers,
@@ -229,14 +225,14 @@ def small_world_simulation(number_of_buyers,
                                         results_directory,
                                         probability_of_rewire,
                                         community_start_structure)
-    logger = Logger(results_directory, assemblage)
-    logger.log(small_world, 0, 0, 0, None)
+    log = logger.Logger(results_directory, assemblage)
+    log.log(small_world, 0, 0, 0, None)
 
     print("Beginning simulation...")
     start_time = start_time = time.monotonic()
 
     for epoch in range(1, number_of_epochs + 1):
-        small_world = sw.small_world_rewire(small_world, probability_of_rewire, epoch, logger)
+        small_world = sw.small_world_rewire(small_world, probability_of_rewire, epoch, log)
         small_world = market.change_all_buyer_intentions(small_world, lower_threshold, upper_threshold, death_threshold)
         small_world = market.buy_pots(small_world)
 
@@ -277,7 +273,7 @@ def scale_free_simulation(number_of_buyers,
     @param verbose: if True, will print time log updates to screen
     """
     print("Creating logging resources...")
-    logger = Logger(results_directory, assemblage, model_type="scale_free")
+    log = logger.Logger(results_directory, assemblage, model_type="scale_free")
     sf.make_sf_graph_info_file(number_of_buyers,
                                minimum_number_of_communities,
                                minimum_community_fill,
@@ -298,7 +294,7 @@ def scale_free_simulation(number_of_buyers,
                                                   assemblage,
                                                   initial_set_size,
                                                   community_bonus,
-                                                  logger)
+                                                  log)
     scale_free = market.buy_pots(scale_free)
     epoch = 1
     # while there's nodes not in the graph, add them in sets
@@ -318,7 +314,7 @@ def scale_free_simulation(number_of_buyers,
             next_node_set = random.sample(remaining_buyers, set_size)
         for b in next_node_set:
             remaining_buyers.remove(b)
-        scale_free = sf.build_scale_free_network(next_node_set, scale_free, community_bonus, logger, epoch, buyers)
+        scale_free = sf.build_scale_free_network(next_node_set, scale_free, community_bonus, log, epoch, buyers)
         scale_free = market.change_all_buyer_intentions(scale_free,
                                                         lower_threshold,
                                                         upper_threshold,
@@ -336,7 +332,7 @@ def scale_free_simulation(number_of_buyers,
             scale_free = market.change_all_buyer_intentions(scale_free,
                                                             lower_threshold, upper_threshold, death_threshold)
             scale_free = market.buy_pots(scale_free)
-            logger.log(scale_free, e, 0, 0, buyers)
+            log.log(scale_free, e, 0, 0, buyers)
             if verbose:
                 end_time = time.monotonic()
                 print("Epoch: " + str(epoch))
@@ -393,13 +389,13 @@ def control_simulation_small_world(number_of_buyers,
                                         rewire_prob,
                                         "random")
 
-    logger = Logger(results_directory, assemblage)
+    log = logger.Logger(results_directory, assemblage)
 
     print("Beginning simulation...")
     start_time = start_time = time.monotonic()
 
     for epoch in range(epochs):
-        graph = sw.small_world_rewire(graph, rewire_prob, epoch, logger)
+        graph = sw.small_world_rewire(graph, rewire_prob, epoch, log)
         graph = market.change_all_buyer_intentions(graph, lower_threshold, upper_threshold, death_threshold)
         graph = market.buy_pots(graph)
 
@@ -440,7 +436,7 @@ def control_simulation_scale_free(number_of_buyers,
     @param verbose: if True, will print time log updates to screen
     """
     print("Creating logging resources...")
-    logger = Logger(results_directory, assemblage, model_type="scale_free")
+    log = logger.Logger(results_directory, assemblage, model_type="scale_free")
     controls.make_sf_control_graph_info_file(number_of_buyers,
                                              minimum_number_of_communities,
                                              minimum_community_fill,
@@ -461,7 +457,7 @@ def control_simulation_scale_free(number_of_buyers,
                                                                 assemblage,
                                                                 initial_set_size,
                                                                 community_bonus,
-                                                                logger)
+                                                                log)
     scale_free = market.buy_pots(scale_free)
     epoch = 1
 
@@ -478,7 +474,7 @@ def control_simulation_scale_free(number_of_buyers,
         for b in next_node_set:
             remaining_buyers.remove(b)
         scale_free = controls.build_scale_free_control_network(next_node_set, scale_free, community_bonus,
-                                                               logger, epoch, buyers)
+                                                               log, epoch, buyers)
         scale_free = market.change_all_buyer_intentions(scale_free, lower_threshold, upper_threshold, death_threshold)
         scale_free = market.buy_pots(scale_free)
         if verbose:
@@ -493,7 +489,7 @@ def control_simulation_scale_free(number_of_buyers,
             scale_free = market.change_all_buyer_intentions(scale_free,
                                                             lower_threshold, upper_threshold, death_threshold)
             scale_free = market.buy_pots(scale_free)
-            logger.log(scale_free, e, 0, 0, buyers)
+            log.log(scale_free, e, 0, 0, buyers)
             if verbose:
                 end_time = time.monotonic()
                 print("Epoch: " + str(epoch))
