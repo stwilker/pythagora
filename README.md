@@ -38,8 +38,8 @@ The experiments class is the only class with which most users need to interact. 
 
 Every simulation will include agents (buyers and sellers), communities (groups to which buyers belong), and a market (groups of communities and items for sale). An **epoch** is a single market cycle; buyers enter the market with a purchasing intention and make their purchase. For analysis purposes, changes to the network and community structures are recorded as **time steps** in the data logs. 
 
-## Small World Simulation
-The small world simulation contains all the methods you will use to model how consumption practices change among communities of buyers  as they move in and out of being in a small-world network. In practice, this means that buyers purchasing items go from being minimally connected (long path lengths and high clustering for individual communities) to being maximally connected (short path lengths and low clustering for individual communities).
+## Small-World Simulation
+The small-world simulation contains all the methods you will use to model how consumption practices change among communities of buyers  as they move in and out of being in a small-world network. In practice, this means that buyers purchasing items go from being minimally connected (long path lengths and high clustering for individual communities) to being maximally connected (short path lengths and low clustering for individual communities).
 
 Here is an example of how to run a small world simulation:
 
