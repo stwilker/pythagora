@@ -4,14 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="65312264-0057-4445-8d0d-17e37806ae1f" name="Changes" comment="Paper.md update">
+    <list default="true" id="65312264-0057-4445-8d0d-17e37806ae1f" name="Changes" comment="imports fixed">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pythagora/controls.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/pythagora/controls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pythagora/experiments.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/pythagora/experiments.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pythagora/generate.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/pythagora/generate.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pythagora/logger.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/pythagora/logger.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pythagora/scalefree.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/pythagora/scalefree.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pythagora/smallworld.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/pythagora/smallworld.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -117,7 +111,7 @@
       <workItem from="1723759912873" duration="3697000" />
       <workItem from="1723835710011" duration="5289000" />
       <workItem from="1724086349556" duration="2484000" />
-      <workItem from="1724095841030" duration="290000" />
+      <workItem from="1724095841030" duration="1006000" />
     </task>
     <task id="LOCAL-00001" summary="Control experiments refactored; documentation updated">
       <option name="closed" value="true" />
@@ -159,7 +153,15 @@
       <option name="project" value="LOCAL" />
       <updated>1724092787707</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="imports fixed">
+      <option name="closed" value="true" />
+      <created>1724096151511</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1724096151511</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -170,7 +172,8 @@
     <MESSAGE value="JOSS updates" />
     <MESSAGE value="Documentation update" />
     <MESSAGE value="Paper.md update" />
-    <option name="LAST_COMMIT_MESSAGE" value="Paper.md update" />
+    <MESSAGE value="imports fixed" />
+    <option name="LAST_COMMIT_MESSAGE" value="imports fixed" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
