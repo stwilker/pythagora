@@ -4,7 +4,7 @@ protocols. This includes initialization methods and information file generation.
 
 import random
 import networkx as nx
-import generate
+from . import generate
 import os
 from datetime import date
 from datetime import datetime

@@ -4,11 +4,7 @@ Includes all methods needed to generate initial marketplace environment.
 
 import random
 from . import agents
-from agents import Buyer
 from . import groups
-from groups import Community
-from groups import CommunitySet
-
 
 def generate_initial_agents(num_buyers, assemblage):
     """
@@ -25,7 +21,7 @@ def generate_initial_agents(num_buyers, assemblage):
         for i in range(num_buyers):
             random_intention = random.choice(list(assemblage))
             b_name = "buyer_" + str(i)
-            new_buyer = Buyer(random_intention, "no_pot_choice", "no_community_yet", b_name)
+            new_buyer = agents.Buyer(random_intention, "no_pot_choice", "no_community_yet", b_name)
             list_of_buyers.append(new_buyer)
         return list_of_buyers
 
@@ -72,14 +68,14 @@ def make_initial_communities(list_of_buyers, min_number_of_communities, min_comm
         raise ValueError('Minimum conditions not possible.')
     # Make a stack and fill with buyers
     stack = list_of_buyers
-    group = CommunitySet([], assemblage)
+    group = groups.CommunitySet([], assemblage)
     # Sorting buyers into communities
     first_pass = True
     while len(stack) != 0:
         # Case 1: There are no communities; generate min num communities
         if first_pass:
             for i in range(min_number_of_communities):
-                group.add_community(Community([], "#" + str(group.number_of_communities() + 1)))
+                group.add_community(groups.Community([], "#" + str(group.number_of_communities() + 1)))
             first_pass = False
         # Case 2: Any community has less than min num buyers
         elif not minimum_community_fill(group, min_community_fill):
@@ -98,7 +94,7 @@ def make_initial_communities(list_of_buyers, min_number_of_communities, min_comm
             choice = random.choice(list(range(number_of_communities + 1)))
             top_buyer = stack.pop()
             if choice == number_of_communities:  # make new community
-                new_community = Community([], "#" + str(group.number_of_communities() + 1))
+                new_community = groups.Community([], "#" + str(group.number_of_communities() + 1))
                 group.add_community(new_community)
                 group.add_buyer_to_community_by_name(top_buyer, new_community)
             else:
@@ -115,5 +111,5 @@ def initialize_market_environment(num_buyers, min_communities, min_community_fil
     @param min_community_fill: minimum number of buyers per community
     @return CommunitySet object representing initialized market
     """
-    buyers = generate.generate_initial_agents(num_buyers, assemblage)
-    return generate.make_initial_communities(buyers, min_communities, min_community_fill, assemblage)
+    buyers = generate_initial_agents(num_buyers, assemblage)
+    return make_initial_communities(buyers, min_communities, min_community_fill, assemblage)

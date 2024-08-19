@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "pythagora"
-version = "1.0.1"
+version = "1.0.2"
 authors = [
   { name="Sarah T. Wilker", email="swilker@alumni.stanford.edu" },
     {name="Annie K. Lamar", email="aklamar@ucsb.edu"},
