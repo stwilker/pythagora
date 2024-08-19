@@ -4,11 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="65312264-0057-4445-8d0d-17e37806ae1f" name="Changes" comment="Documentation update">
+    <list default="true" id="65312264-0057-4445-8d0d-17e37806ae1f" name="Changes" comment="Paper.md update">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JOSS/paper.bib" beforeDir="false" afterPath="$PROJECT_DIR$/JOSS/paper.bib" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JOSS/paper.md" beforeDir="false" afterPath="$PROJECT_DIR$/JOSS/paper.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pythagora/controls.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/pythagora/controls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pythagora/experiments.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/pythagora/experiments.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pythagora/generate.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/pythagora/generate.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pythagora/logger.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/pythagora/logger.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pythagora/scalefree.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/pythagora/scalefree.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pythagora/smallworld.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/pythagora/smallworld.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,7 +71,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/karaa/OneDrive/Documents/Python Packages/pythagora&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/karaa/OneDrive/Documents/Python Packages/testing_pythagora&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -113,7 +116,8 @@
       <workItem from="1723756517982" duration="2588000" />
       <workItem from="1723759912873" duration="3697000" />
       <workItem from="1723835710011" duration="5289000" />
-      <workItem from="1724086349556" duration="2240000" />
+      <workItem from="1724086349556" duration="2484000" />
+      <workItem from="1724095841030" duration="290000" />
     </task>
     <task id="LOCAL-00001" summary="Control experiments refactored; documentation updated">
       <option name="closed" value="true" />
@@ -147,7 +151,15 @@
       <option name="project" value="LOCAL" />
       <updated>1723841039810</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Paper.md update">
+      <option name="closed" value="true" />
+      <created>1724092787707</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1724092787707</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -157,6 +169,18 @@
     <MESSAGE value="Control experiments refactored; documentation updated" />
     <MESSAGE value="JOSS updates" />
     <MESSAGE value="Documentation update" />
-    <option name="LAST_COMMIT_MESSAGE" value="Documentation update" />
+    <MESSAGE value="Paper.md update" />
+    <option name="LAST_COMMIT_MESSAGE" value="Paper.md update" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/src/pythagora/experiments.py</url>
+          <line>165</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

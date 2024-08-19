@@ -9,7 +9,7 @@ import os
 from datetime import date
 from datetime import datetime
 import csv
-import scalefree as sf
+from . import scalefree as sf
 
 
 def make_sf_control_graph_info_file(num_buyers,

@@ -43,7 +43,7 @@ the `get_buyer_community_centralities` method to `True`. For convenience, this i
 import networkx as nx
 import os
 import csv
-import smallworld
+from . import smallworld
 import itertools
 
 

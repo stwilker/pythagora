@@ -4,7 +4,7 @@ This module contains methods to initialize and compute metrics for a scale free 
 
 import math
 import random
-import generate
+from . import generate
 from datetime import date
 from datetime import datetime
 import os

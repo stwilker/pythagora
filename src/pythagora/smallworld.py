@@ -3,7 +3,7 @@ This module contains methods to initialize and compute metrics for a small-world
 """
 
 import networkx as nx
-import generate
+from . import generate
 import math
 from datetime import date
 from datetime import datetime

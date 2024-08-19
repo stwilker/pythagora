@@ -163,12 +163,12 @@ Stanford University.
 
 """
 
-import smallworld as sw
-import scalefree as sf
-import controls
-import market
-import generate
-import logger
+from . import smallworld as sw
+from . import scalefree as sf
+from . import controls
+from . import market
+from . import generate
+from . import logger
 from logger import Logger
 from datetime import timedelta
 import time
