@@ -44,7 +44,7 @@ interfaces well with the existing functions in the `NetworkX` Python package [@h
 
 Finally, `Pythagora` allows users to run experiments with a single method call, increasing accessibility for researchers without substantial coding experience. The results of experiments are stored in .csv files, making it easy for researchers to load results into a Pandas Dataframe or Excel, depending on their research team's skills and preferences.
 
-`Pythagora` was designed to be used by researchers in a variety of fields, including and especially economics, cultural analytics, historical sciences, archaeology, or network science. An early version of this package was implemented in a recent dissertation from Stanford University [@wilker_social_2023]. The current version of `Pythagora` was also cited in a forthcoming (expected 2024) article in the _Journal on Hellenistic and Roman Material Culture_ [@wilker_toasting_nodate]. 
+`Pythagora` was designed to be used by researchers in a variety of fields, including and especially economics, cultural analytics, historical sciences, archaeology, or network science. An early version of this package was implemented in a recent dissertation from Stanford University [@wilker_social_2023]. The current version of `Pythagora` was also cited in a forthcoming (expected 2024) article in the _Journal on Hellenistic and Roman Material Culture_ [@wilker_toasting_inpress]. 
 
 # Installation & Documentation
 
