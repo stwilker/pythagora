@@ -46,20 +46,21 @@ Here is an example of how to run a small world simulation:
 ``` 
 from pythagora import experiments
 
-experiments.small_world_simulation (minimum_number_of_communities=3, 
+experiments.small_world_simulation (number_of_buyers=100,
+                                    minimum_number_of_communities=3, 
                                     minimum_community_fill=3, 
-                                    assemblage=['Item1', 'Item2', 'Item3', Item4'], 
-                                    number_of_epochs=800, 
+                                    assemblage=['Item1', 'Item2', 'Item3', 'Item4'], 
+                                    number_of_epochs=100, 
                                     upper_threshold=.66, 
                                     lower_threshold=.33, 
-                                    death_threshold=0.5, 
+                                    death_threshold=0.01, 
                                     results_directory='results/', 
                                     probability_of_rewire=0.5, 
                                     community_start_structure="dense", 
                                     verbose=True)
 ```
 
-This method call will run a small world experiment for 800 epochs. The results of the experiment will be placed in the directory indicated by the `results_directory` parameter.
+This method call will run a small world experiment for 100 epochs. The results of the experiment will be placed in the directory indicated by the `results_directory` parameter.
 
 ## Scale-Free Simulation
 
@@ -73,11 +74,11 @@ from pythagora import experiments
 experiments.scale_free_simulation(number_of_buyers=50,
                                   minimum_number_of_communities=5,
                                   minimum_community_fill=3, 
-                                  assemblage=['Pot1', 'Pot2', 'Pot3', Pot4'], 
-                                  number_of_epochs=800, 
+                                  assemblage=['Item1', 'Item2', 'Item3', 'Item4'], 
+                                  number_of_epochs=100, 
                                   upper_threshold=.66, 
                                   lower_threshold=.33, 
-                                  death_threshold=0.5, 
+                                  death_threshold=0.01, 
                                   results_directory='results/', 
                                   initial_set_size=15, 
                                   set_size=5, 
@@ -86,7 +87,7 @@ experiments.scale_free_simulation(number_of_buyers=50,
 
 ```
 
-This method call will run a small world experiment for 800 epochs. The results of the experiment will be placed in the directory indicated by the `results_directory` parameter.
+This method call will run a small world experiment for 100 epochs. The results of the experiment will be placed in the directory indicated by the `results_directory` parameter.
 
 ## Experimental Controls and Random Simulations
 
@@ -98,11 +99,11 @@ from pythagora import experiments
 experiments.small_world_control(number_of_buyers=50,
                                 minimum_number_of_communities=3, 
                                 minimum_community_fill=3, 
-                                assemblage=['Pot1', 'Pot2', 'Pot3', Pot4'], 
-                                number_of_epochs=800, 
+                                assemblage=['Item1', 'Item2', 'Item3', 'Item4'], 
+                                number_of_epochs=100, 
                                 upper_threshold=.66, 
                                 lower_threshold=.33, 
-                                death_threshold=0.5, 
+                                death_threshold=0.01, 
                                 results_directory='results/', 
                                 rewire_prob=0.5, 
                                 link_prob=0.5, 

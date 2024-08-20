@@ -58,7 +58,7 @@ def check_for_pot_death(G, death_threshold):
 
 def change_all_buyer_intentions(G, upper_threshold, lower_threshold, death_threshold):
     """
-
+    Changes buyer intentions to purchase new items (potentially).
     @param G: graph representing current market state
     @param upper_threshold: % of buyers that must own a particular item to change a buyer's intention to that item
     @param lower_threshold: max % of buyers that may own a particular item to change a buyer's intention to random item

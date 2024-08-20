@@ -115,6 +115,12 @@ who purchased that pot) drops below the death threshold, then the pot is removed
 selling this item, they are automatically assigned the most popular item.  In short: How unpopular does an item need
 to be before it is removed from the market altogether?
 
+Note: If your death threshold is greater than (1 / number of items in assemblage), you will get an error. Buyers are
+randomly assigned an item during the initialization phase of the experiment, and can change their purchase intention
+only after this initial random assignment. If no single item in the assemblage is randomly assigned to a greater
+percentage of buyers than the death threshold, the market simulation cannot continue: there are no items available
+for purchase.
+
 Probability of Rewire (Small World Only)
 ----------------------------------------
 B{Parameter:} C{probability_of_rewire}
@@ -172,6 +178,26 @@ from . import logger
 from datetime import timedelta
 import time
 import random
+import sys
+
+
+def check_experiment_parameters(assemblage, death_threshold):
+    """
+    Checks if the experiment parameters are valid. If parameters are invalid, exits the program and prints an error
+    message.
+    @param assemblage: list of items for sale in marketplace
+    @param death_threshold: percentage at which an item is removed from the market
+    @return: True if experiment is valid
+    """
+    if death_threshold >= (1 / len(assemblage)):
+        print("EXPERIMENT PARAMETERS INVALID")
+        print("")
+        print("Because death threshold is greater than (1 / total number of items)%, this marketplace has no items "
+              "available for purchase. You can: reduce the number of items in your assemblage or lower the death "
+              "threshold. We recommend a death threshold of 0.01. For more information, type help(experiments) --> "
+              "death threshold.")
+        sys.exit()
+    return True
 
 
 def small_world_simulation(number_of_buyers,
@@ -193,7 +219,7 @@ def small_world_simulation(number_of_buyers,
     @param number_of_buyers: number of buyers in marketspace
     @param minimum_number_of_communities: minimum number of communities to which buyers belong
     @param minimum_community_fill: minimum number of buyers per community
-    @param assemblage: list of items for sale in marketspace
+    @param assemblage: list of items for sale in marketplace
     @param number_of_epochs: number of epochs (purchase cycles)
     @param upper_threshold: % of buyers that must own a particular item to change a buyer's intention to that item
     @param lower_threshold: max % of buyers that may own a particular item to change a buyer's intention to random item
@@ -203,6 +229,7 @@ def small_world_simulation(number_of_buyers,
     @param community_start_structure: structure in which communities will be instantiated
     @param verbose: if True, will print time log updates to screen
     """
+    check_experiment_parameters(assemblage, death_threshold)
     print("Initializing small world model...")
     small_world = sw.initialize_small_world(number_of_buyers,
                                             minimum_number_of_communities,
@@ -272,6 +299,7 @@ def scale_free_simulation(number_of_buyers,
     @param community_bonus: degree to which community affiliation impacts purchase intention
     @param verbose: if True, will print time log updates to screen
     """
+    check_experiment_parameters(assemblage, death_threshold)
     print("Creating logging resources...")
     log = logger.Logger(results_directory, assemblage, model_type="scale_free")
     sf.make_sf_graph_info_file(number_of_buyers,
@@ -368,6 +396,7 @@ def control_simulation_small_world(number_of_buyers,
     @param link_prob: probability any two nodes (buyers) will be linked in random graph initialization
     @param verbose: verbose: if True, will print time log updates to screen
     """
+    check_experiment_parameters(assemblage, death_threshold)
     print("Initializing control model using small world protocol...")
     my_group = generate.initialize_market_environment(number_of_buyers,
                                                       minimum_number_of_communities,
@@ -435,6 +464,7 @@ def control_simulation_scale_free(number_of_buyers,
     @param community_bonus: degree to which community affiliation impacts purchase intention
     @param verbose: if True, will print time log updates to screen
     """
+    check_experiment_parameters(assemblage, death_threshold)
     print("Creating logging resources...")
     log = logger.Logger(results_directory, assemblage, model_type="scale_free")
     controls.make_sf_control_graph_info_file(number_of_buyers,

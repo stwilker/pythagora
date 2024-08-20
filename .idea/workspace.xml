@@ -6,7 +6,53 @@
   <component name="ChangeListManager">
     <list default="true" id="65312264-0057-4445-8d0d-17e37806ae1f" name="Changes" comment="version update">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JOSS/paper.md" beforeDir="false" afterPath="$PROJECT_DIR$/JOSS/paper.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/ajax.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/all-documents.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/apidocs.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/classIndex.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/extra.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/fonts/Roboto-Slab-Bold.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/fonts/Roboto-Slab-Regular.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/fonts/book.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/fonts/home.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/fonts/info.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/fonts/lato-bold.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/fonts/lato-normal.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/fonts/minus-square-o.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/fonts/plus-square-o.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/fonts/x-circle.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/fullsearchindex.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/lunr.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/moduleIndex.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/nameIndex.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/objects.inv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/pydoctor.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/pythagora.agents.Buyer.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/pythagora.agents.Seller.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/pythagora.agents.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/pythagora.controls.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/pythagora.experiments.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/pythagora.generate.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/pythagora.groups.Community.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/pythagora.groups.CommunitySet.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/pythagora.groups.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/pythagora.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/pythagora.logger.Logger.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/pythagora.logger.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/pythagora.market.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/pythagora.scalefree.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/pythagora.smallworld.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/readthedocstheme.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/search.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/searchindex.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/searchlib.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/sidebartoggle.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/undoccedSummary.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pythagora/experiments.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/pythagora/experiments.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pythagora/market.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/pythagora/market.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,8 +63,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Python Script" />
-        <option value="Jupyter Notebook" />
         <option value="Setup Script" />
+        <option value="Jupyter Notebook" />
       </list>
     </option>
   </component>
@@ -78,6 +124,7 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\karaa\OneDrive\Documents\Python Packages\pythagora" />
       <recent name="C:\Users\karaa\OneDrive\Documents\Python Packages\pythagora\JOSS" />
       <recent name="C:\Users\karaa\OneDrive\Documents\Python Packages\pythagora\src\pythagora" />
     </key>
@@ -112,7 +159,8 @@
       <workItem from="1723759912873" duration="3697000" />
       <workItem from="1723835710011" duration="5289000" />
       <workItem from="1724086349556" duration="2484000" />
-      <workItem from="1724095841030" duration="2536000" />
+      <workItem from="1724095841030" duration="3190000" />
+      <workItem from="1724171744911" duration="4644000" />
     </task>
     <task id="LOCAL-00001" summary="Control experiments refactored; documentation updated">
       <option name="closed" value="true" />
@@ -186,7 +234,15 @@
       <option name="project" value="LOCAL" />
       <updated>1724097994702</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="version update">
+      <option name="closed" value="true" />
+      <created>1724098423489</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1724098423489</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
