@@ -121,7 +121,7 @@ This method call will run a small world experiment for 800 epochs. The results o
 
 ## Experimental Controls and Random Simulations
 
-You can also run control experiments for both small world and scale free network protocols. Here is an example of how to run a control simulation for a small world network, which is initialized with a random graph rather than a predefined network structure.
+You can also run control experiments for both small-world and scale-free network protocols. Here is an example of how to run a control simulation for a small-world network, which is initialized with a random graph rather than a predefined network structure.
 
 ```
 from pythagora import experiments
