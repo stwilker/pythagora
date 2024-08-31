@@ -96,11 +96,11 @@ You can also run control experiments for both small world and scale free network
 ```
 from pythagora import experiments
 
-experiments.small_world_control(number_of_buyers=50,
+experiments.control_simulation_small_world(number_of_buyers=50,
                                 minimum_number_of_communities=3, 
                                 minimum_community_fill=3, 
                                 assemblage=['Item1', 'Item2', 'Item3', 'Item4'], 
-                                number_of_epochs=100, 
+                                epochs=100, 
                                 upper_threshold=.66, 
                                 lower_threshold=.33, 
                                 death_threshold=0.01, 
