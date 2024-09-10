@@ -94,7 +94,7 @@ def build_scale_free_network(set_of_nodes, G, community_bonus, logger, epoch, al
             G.add_edge(current_node, current_node)
         if t != 0:
             G.add_edge(current_node, selected_node[0])
-    logger.log(G, epoch, timestep, 0, all_buyers_in_market)
+        logger.log(G, epoch, timestep, 0, all_buyers_in_market)
     return G
 
 

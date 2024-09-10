@@ -4,16 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="65312264-0057-4445-8d0d-17e37806ae1f" name="Changes" comment="documentation update">
-      <change afterPath="$PROJECT_DIR$/dist/pythagora-1.1.0-py3-none-any.whl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/pythagora-1.1.0.tar.gz" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pythagora.egg-info/PKG-INFO" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pythagora.egg-info/SOURCES.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pythagora.egg-info/dependency_links.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pythagora.egg-info/top_level.txt" afterDir="false" />
+    <list default="true" id="65312264-0057-4445-8d0d-17e37806ae1f" name="Changes" comment="citation update">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JOSS/paper.bib" beforeDir="false" afterPath="$PROJECT_DIR$/JOSS/paper.bib" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JOSS/paper.md" beforeDir="false" afterPath="$PROJECT_DIR$/JOSS/paper.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pythagora/experiments.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/pythagora/experiments.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pythagora/scalefree.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/pythagora/scalefree.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -122,7 +116,9 @@
       <workItem from="1724086349556" duration="2484000" />
       <workItem from="1724095841030" duration="3190000" />
       <workItem from="1724171744911" duration="4838000" />
-      <workItem from="1724179266951" duration="210000" />
+      <workItem from="1724179266951" duration="234000" />
+      <workItem from="1724263309576" duration="606000" />
+      <workItem from="1725998935327" duration="761000" />
     </task>
     <task id="LOCAL-00001" summary="Control experiments refactored; documentation updated">
       <option name="closed" value="true" />
@@ -220,7 +216,15 @@
       <option name="project" value="LOCAL" />
       <updated>1724179330726</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="citation update">
+      <option name="closed" value="true" />
+      <created>1724179491569</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1724179491569</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -236,6 +240,7 @@
     <MESSAGE value="version update" />
     <MESSAGE value="version update; death threshold bug fixed" />
     <MESSAGE value="documentation update" />
-    <option name="LAST_COMMIT_MESSAGE" value="documentation update" />
+    <MESSAGE value="citation update" />
+    <option name="LAST_COMMIT_MESSAGE" value="citation update" />
   </component>
 </project>
