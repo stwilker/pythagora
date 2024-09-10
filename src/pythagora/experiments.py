@@ -332,6 +332,7 @@ def scale_free_simulation(number_of_buyers,
             remaining_buyers.append(buyer)
     # PART 1: Add all buyers to market
     last = False
+    epoch_warning = False
     while not last:
         set_to_last = False
         next_node_set = []
@@ -344,6 +345,8 @@ def scale_free_simulation(number_of_buyers,
             next_node_set = random.sample(remaining_buyers, set_size)
         for b in next_node_set:  # remove added buyers from remaining buyers
             remaining_buyers.remove(b)
+
+
         scale_free = sf.build_scale_free_network(next_node_set, scale_free, community_bonus, log, epoch, buyers)
         scale_free = market.change_all_buyer_intentions(scale_free,
                                                         lower_threshold,
@@ -355,10 +358,13 @@ def scale_free_simulation(number_of_buyers,
             print("Epoch: " + str(epoch))
             print("Time elapsed: %s seconds " % timedelta(seconds=end_time - start_time))
         epoch += 1
-        if epoch >= number_of_epochs:
+        if epoch >= number_of_epochs and not epoch_warning:
+            epoch_warning = True
+            print("***********************")
             print("Target epochs reached, but buyers still remain outside market.")
-            print("Continuing experiment for minimum number of epochs required to add", number_of_buyers, "buyers to "
-                                                                                                          "market.")
+            print("Continuing experiment for minimum number of epochs required to add", number_of_buyers,
+                  "buyers to market.")
+            print("***********************")
         if set_to_last:
             last = True
 

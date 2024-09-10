@@ -86,7 +86,7 @@ def build_scale_free_network(set_of_nodes, G, community_bonus, logger, epoch, al
             for p in normalized_probs.keys():
                 w.append(normalized_probs[p])
             selected_node = random.choices(population, weights=w)
-            timestep += 1
+
         # add our node to the graph space
         # optional: move this line up to allow self loops
         G.add_node(current_node)
@@ -95,6 +95,7 @@ def build_scale_free_network(set_of_nodes, G, community_bonus, logger, epoch, al
         if t != 0:
             G.add_edge(current_node, selected_node[0])
         logger.log(G, epoch, timestep, 0, all_buyers_in_market)
+        timestep += 1
     return G
 
 
