@@ -124,7 +124,10 @@ def get_degree_stats(graph):
         if graph.degree(buyer) < min_degree:
             min_degree = graph.degree(buyer)
         total_degree += graph.degree(buyer)
-    avg_degree = total_degree / len(graph.nodes)
+    if not len(graph.nodes) == 0:
+        avg_degree = total_degree / len(graph.nodes)
+    else:
+        avg_degree = 0
     return avg_degree, min_degree, max_degree
 
 
