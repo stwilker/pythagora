@@ -53,7 +53,7 @@ def make_sf_control_graph_info_file(num_buyers,
     info = ["scale free", str(date.today()), str((datetime.now()).strftime("%H:%M:%S")), str(num_buyers),
             str(initial_set_size), str(set_size), str(min_num_communities), str(min_community_fill),
             assemblage, str(epochs), str(upper_thresh), str(lower_thresh),
-            str(death_thresh), str(community_bonus), str(probability_of_link)]
+            str(death_thresh), str(community_bonus)]
     writer.writerow(info)
 
 
