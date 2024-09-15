@@ -4,7 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="65312264-0057-4445-8d0d-17e37806ae1f" name="Changes" comment="bug fix in controls.py">
+    <list default="true" id="65312264-0057-4445-8d0d-17e37806ae1f" name="Changes" comment="bug fix in logger.py">
+      <change afterPath="$PROJECT_DIR$/.idea/jupyter-settings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pythagora/logger.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/pythagora/logger.py" afterDir="false" />
     </list>
@@ -60,22 +61,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/karaa/OneDrive/Documents/Python Packages/testing_pythagora&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.editor&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "C:/Users/karaa/OneDrive/Documents/Python Packages/testing_pythagora",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "org.jetbrains.plugins.notebooks.jupyter.connections.configuration.JupyterServerConfigurable",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\karaa\OneDrive\Documents\Python Packages\pythagora" />
@@ -120,7 +122,7 @@
       <workItem from="1725998935327" duration="2090000" />
       <workItem from="1726001056422" duration="66000" />
       <workItem from="1726419546215" duration="196000" />
-      <workItem from="1726421637213" duration="59000" />
+      <workItem from="1726421637213" duration="2002000" />
     </task>
     <task id="LOCAL-00001" summary="Control experiments refactored; documentation updated">
       <option name="closed" value="true" />
@@ -250,7 +252,15 @@
       <option name="project" value="LOCAL" />
       <updated>1726419718812</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="bug fix in logger.py">
+      <option name="closed" value="true" />
+      <created>1726421784365</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1726421784365</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -269,6 +279,7 @@
     <MESSAGE value="citation update" />
     <MESSAGE value="warning added to minimum epoch in scale free experiment; timestep reporting fixed for scale free experiment; testing complete" />
     <MESSAGE value="bug fix in controls.py" />
-    <option name="LAST_COMMIT_MESSAGE" value="bug fix in controls.py" />
+    <MESSAGE value="bug fix in logger.py" />
+    <option name="LAST_COMMIT_MESSAGE" value="bug fix in logger.py" />
   </component>
 </project>
