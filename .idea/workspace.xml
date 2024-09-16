@@ -4,11 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="65312264-0057-4445-8d0d-17e37806ae1f" name="Changes" comment="bug fix for null graphs created in time step 1 of SF control experiments">
+    <list default="true" id="65312264-0057-4445-8d0d-17e37806ae1f" name="Changes" comment="bug fix for edge additions in SF control">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pyproject.toml" beforeDir="false" afterPath="$PROJECT_DIR$/pyproject.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pythagora.egg-info/PKG-INFO" beforeDir="false" afterPath="$PROJECT_DIR$/src/pythagora.egg-info/PKG-INFO" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pythagora/controls.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/pythagora/controls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pythagora/experiments.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/pythagora/experiments.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pythagora/logger.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/pythagora/logger.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -126,6 +126,8 @@
       <workItem from="1726421637213" duration="2002000" />
       <workItem from="1726425021163" duration="125000" />
       <workItem from="1726426877386" duration="2973000" />
+      <workItem from="1726505858323" duration="271000" />
+      <workItem from="1726523555458" duration="1898000" />
     </task>
     <task id="LOCAL-00001" summary="Control experiments refactored; documentation updated">
       <option name="closed" value="true" />
@@ -279,7 +281,15 @@
       <option name="project" value="LOCAL" />
       <updated>1726467374793</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="bug fix for edge additions in SF control">
+      <option name="closed" value="true" />
+      <created>1726506093424</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1726506093424</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -300,6 +310,7 @@
     <MESSAGE value="bug fix in controls.py" />
     <MESSAGE value="bug fix in logger.py" />
     <MESSAGE value="bug fix for null graphs created in time step 1 of SF control experiments" />
-    <option name="LAST_COMMIT_MESSAGE" value="bug fix for null graphs created in time step 1 of SF control experiments" />
+    <MESSAGE value="bug fix for edge additions in SF control" />
+    <option name="LAST_COMMIT_MESSAGE" value="bug fix for edge additions in SF control" />
   </component>
 </project>

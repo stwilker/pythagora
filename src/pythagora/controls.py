@@ -75,8 +75,6 @@ def build_scale_free_control_network(set_of_nodes, G, community_bonus,
         current_node = set_of_nodes.pop()
         # add our node to the graph space
         t = len(G.nodes)
-        # move add_node line above t assignment to allow self loops
-        G.add_node(current_node)
         # assign probabilities to each node
         probs = {}  # (nodes, probabilities)
         if t != 0:
@@ -91,7 +89,10 @@ def build_scale_free_control_network(set_of_nodes, G, community_bonus,
             for p in normalized_probs.keys():
                 w.append(normalized_probs[p])
             selected_node = random.choices(population, weights=w)
+            G.add_node(current_node)
             G.add_edge(current_node, selected_node[0])
+        else:
+            G.add_node(current_node) # move this outside the if statement to allow self loops
     logger.log(G, epoch, 0, 0, all_buyers_in_market)
     return G
 
