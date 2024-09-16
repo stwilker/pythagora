@@ -180,6 +180,8 @@ import time
 import random
 import sys
 
+from importlib import reload
+reload(logger)
 
 def check_experiment_parameters(assemblage, death_threshold):
     """
@@ -345,7 +347,6 @@ def scale_free_simulation(number_of_buyers,
             next_node_set = random.sample(remaining_buyers, set_size)
         for b in next_node_set:  # remove added buyers from remaining buyers
             remaining_buyers.remove(b)
-
 
         scale_free = sf.build_scale_free_network(next_node_set, scale_free, community_bonus, log, epoch, buyers)
         scale_free = market.change_all_buyer_intentions(scale_free,

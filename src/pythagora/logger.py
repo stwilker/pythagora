@@ -124,10 +124,7 @@ def get_degree_stats(graph):
         if graph.degree(buyer) < min_degree:
             min_degree = graph.degree(buyer)
         total_degree += graph.degree(buyer)
-    if not len(graph.nodes) == 0:
-        avg_degree = total_degree / len(graph.nodes)
-    else:
-        avg_degree = 0
+    avg_degree = total_degree / len(graph.nodes)
     return avg_degree, min_degree, max_degree
 
 
@@ -356,26 +353,18 @@ class Logger:
         info.append(avg)
         info.append(minimum)
         info.append(maximum)
-        if len(scale_free_graph.nodes) == 0:
+
+        if nx.is_connected(scale_free_graph):
+            info.append(nx.diameter(scale_free_graph))
+            info.append(nx.average_shortest_path_length(scale_free_graph))
+        elif not nx.is_connected(scale_free_graph):
             info.append("not_connected")
             info.append("not_connected")
-            info.append(0)  # clustering coefficient
-            info.append(0)  # transitivity
-            info.append(0)  # intra
-            info.append(0)  # inter
-        else:
-            print("GRAPH SIZE", len(scale_free_graph.nodes))
-            if nx.is_connected(scale_free_graph):
-                info.append(nx.diameter(scale_free_graph))
-                info.append(nx.average_shortest_path_length(scale_free_graph))
-            elif not nx.is_connected(scale_free_graph):
-                info.append("not_connected")
-                info.append("not_connected")
-            info.append(smallworld.clustering_coefficient(scale_free_graph))
-            info.append(nx.transitivity(scale_free_graph))
-            inter, intra = count_community_connections(scale_free_graph)
-            info.append(intra)
-            info.append(inter)
+        info.append(smallworld.clustering_coefficient(scale_free_graph))
+        info.append(nx.transitivity(scale_free_graph))
+        inter, intra = count_community_connections(scale_free_graph)
+        info.append(intra)
+        info.append(inter)
         if self.images:
             graph_data = []
             for edge in scale_free_graph.edges():
@@ -459,6 +448,5 @@ class Logger:
             self.log_small_world(graph, (epoch, timestep), num_rewires)
         if self.model == 'scale_free':
             self.log_scale_free(graph, (epoch, timestep), all_buyers_in_market)
-        if (len(graph.nodes)) != 0:
-            self.log_buyers(graph, [epoch, timestep])
-            self.log_communities_matrix(graph, epoch, timestep, all_buyers_in_market)
+        self.log_buyers(graph, [epoch, timestep])
+        self.log_communities_matrix(graph, epoch, timestep, all_buyers_in_market)
