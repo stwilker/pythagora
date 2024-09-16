@@ -125,7 +125,7 @@
       <workItem from="1726419546215" duration="196000" />
       <workItem from="1726421637213" duration="2002000" />
       <workItem from="1726425021163" duration="125000" />
-      <workItem from="1726426877386" duration="2938000" />
+      <workItem from="1726426877386" duration="2973000" />
     </task>
     <task id="LOCAL-00001" summary="Control experiments refactored; documentation updated">
       <option name="closed" value="true" />
@@ -271,7 +271,15 @@
       <option name="project" value="LOCAL" />
       <updated>1726425115908</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="bug fix for null graphs created in time step 1 of SF control experiments">
+      <option name="closed" value="true" />
+      <created>1726467374793</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1726467374793</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
